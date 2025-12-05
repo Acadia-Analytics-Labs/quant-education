@@ -75,7 +75,16 @@ const articles: Articles = {
     ],
   },
   "quantitative-finance": {
-    items: [],
+    items: [
+      {
+        title: "Trend Following Systems",
+        description:
+          "Master systematic trading strategies that capture sustained price movements through disciplined trend identification and risk management",
+        difficulty: "Intermediate",
+        tags: ["Trend Following", "Systematic Trading", "Risk Management", "Position Sizing"],
+        markdownPath: "/src/content/articles/quantitative-finance/trend-following.md",
+      },
+    ],
   },
 };
 
