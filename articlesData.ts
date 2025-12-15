@@ -18,7 +18,7 @@ export interface Articles {
 }
 
 const articles: Articles = {
-  "risk-management": {
+  "trading": {
     items: [
       {
         title: "Position Sizing and Risk Management",
@@ -26,7 +26,7 @@ const articles: Articles = {
           "Learn how to calculate optimal position sizes and manage risk across your portfolio",
         difficulty: "Beginner",
         tags: ["Position Sizing", "Portfolio Theory"],
-        markdownPath: "/src/content/articles/risk-management/position-sizing.md",
+        markdownPath: "/src/content/articles/trading/position-sizing.md",
       },
     ],
   },
@@ -62,7 +62,7 @@ const articles: Articles = {
       },
     ],
   },
-  "finance": {
+  "economics": {
     items: [
       {
         title: "On The Calculus of Value by Howard Marks",
@@ -70,7 +70,19 @@ const articles: Articles = {
           "Howard Marks discusses the relationship between price and value, investment psychology, and market valuation metrics",
         difficulty: "Intermediate",
         tags: ["Valuation", "Investment Psychology", "Market Analysis", "P/E Ratio"],
-        markdownPath: "/src/content/articles/finance/Calculus_Of_Value.md",
+        markdownPath: "/src/content/articles/economics/Calculus_Of_Value.md",
+      },
+    ],
+  },
+  "quantitative-finance": {
+    items: [
+      {
+        title: "Trend Following Systems",
+        description:
+          "Master systematic trading strategies that capture sustained price movements through disciplined trend identification and risk management",
+        difficulty: "Intermediate",
+        tags: ["Trend Following", "Systematic Trading", "Risk Management", "Position Sizing"],
+        markdownPath: "/src/content/articles/quantitative-finance/trend-following.md",
       },
     ],
   },
