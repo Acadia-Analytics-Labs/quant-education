@@ -21,6 +21,14 @@ const articles: Articles = {
   "trading": {
     items: [
       {
+        title: "Understanding ESG Investing",
+        description:
+          "A comprehensive guide to Environmental, Social, and Governance investing, including strategies, measurement, and practical implementation",
+        difficulty: "Intermediate",
+        tags: ["ESG", "Sustainable Investing", "Risk Management", "Corporate Governance", "Impact Investing"],
+        markdownPath: "/articles/trading/esg-investing.md",
+      },
+      {
         title: "Position Sizing and Risk Management",
         description:
           "Learn how to calculate optimal position sizes and manage risk across your portfolio",
@@ -64,6 +72,14 @@ const articles: Articles = {
   },
   "economics": {
     items: [
+      {
+        title: "Day Trading and the Affordability Crisis",
+        description:
+          "How the housing affordability crisis is driving young people toward high-risk trading strategies and creating demand for analytical tools",
+        difficulty: "Beginner",
+        tags: ["Day Trading", "Cryptocurrency", "Risk Management", "Prediction Markets", "Affordability Crisis"],
+        markdownPath: "/articles/economics/day-trading-affordability-crisis.md",
+      },
       {
         title: "On The Calculus of Value by Howard Marks",
         description:
