@@ -28,6 +28,12 @@ For experiments with equally likely outcomes, probability can be calculated usin
 
 $$P(E) = \frac{\text{number of favorable outcomes to } E}{\text{total number of possible outcomes}}$$
 
+### Combining Events
+Set notation can also be applied to events in probability theory.  
+The union, denoted by $A \cup B$, represents the event that at least one of the events $A$ or $B$ occurs.  
+The intersection, denoted by $A \cap B$, represents the event that both events $A$ and $B$ occur.
+The complement, denoted by $A'$, represents the event in which A does not happen.
+
 ## Interpreting Probability
 
 The way we interpret probability depends on the philosophy used in statistics. The two most common interpretations are the **Bayesian** and **Frequentist** perspectives.
