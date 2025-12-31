@@ -13,21 +13,23 @@ In comparison, $P(E)$ represents an unconditional or absolute probability, meani
 ## Conditional Probability Formula
 The formula for conditional probability is:
 
-$$P(A | B) = \frac{P(A \cap B)}{P(B)}$$
+$$P(A | B) = \frac{P(A \text{ and } B)}{P(B)}$$
 
 Where:
-- $P(A \cap B)$ is the probability of both $A$ and $B$ occurring
+- $P(A \text{ and } B)$ is the probability of both $A$ and $B$ occurring
 - $P(B)$ is the probability of $B$ occurring
 
+### Example:
 A simple example to illustrate conditional probability is marbles in a bag. Say you have 10 marbles, 5 red, 3 blue, and 2 green. Let the event of pulling a red marble be $R$, and let the event of pulling a marble that is not green be $B$.
 
 We know:
 $$P(R) = \frac{5}{10} = 0.5 \text{ and } P(B) = \frac{8}{10} = 0.8$$
 
 If we know that the next marble we pull is not green, then the conditional probability that the marble is red can be expressed as:
-$$P(R|B) = \frac{P(R \cap B)}{P(B)} = \frac{\frac{5}{10}}{\frac{8}{10}}$$
+$$P(R|B) = \frac{P(R \text{ and } B)}{P(B)} = \frac{\frac{5}{10}}{\frac{8}{10}}$$
 $$P(R|B) = \frac{5}{8}$$
 
+### Application in Trading
 Conditional probability is useful in trading because it allows traders to update the likelihood of future price movements based on new market information.
 
 ## Bayes' Theorem
@@ -42,6 +44,16 @@ Where:
 - $P(A)$ is the prior probability
 - $P(B)$ is the probability of $B$
 
+### Proof:
+We can derive this formula by using the conditional probability. 
+Given:
+$$P(A | B) = \frac{P(A \text{ and } B)}{P(B)} ~~~~~~~~~~~~~~~ P(B | A) = \frac{P(B \text{ and } A)}{P(A)}$$
+The key observation is that $P(A \text{ and } B) = P(B \text{ and } A)$, since both expressions describe the same situation: A and B happen together. 
+
+As a result multiplying $P(B | A)$ by $\frac{P(A)}{P(B)}$ to $P(B | A)$ will give $P(A | B)$.
+
+
+### Example:
 We can again use the example of marbles in a bag to illustrate how Bayes' Theorem can be applied.
 
 Say we have two bags of marbles $B_1$ and $B_2$. Bag $B_1$ has 5 green marbles and 5 red marbles. Bag $B_2$ has 7 green marbles and 3 red marbles. Say you have one of these two bags but you do not know which. As such, our prior beliefs are:
@@ -56,4 +68,5 @@ $$P(B_2 | G) = \frac{P(G | B_2)\cdot P(B_2)}{P(G)} = \frac{\frac{7}{10}\cdot \fr
 
 Given that you pulled a green marble from the bag, there is a higher 58.3% probability that you have bag $B_2$ compared to a 41.7% probability that you have bag $B_1$.
 
+### Application in Trading:
 In trading, Bayes’ Theorem allows traders to systematically incorporate new evidence, such as price action, volume, or macroeconomic data, into existing beliefs about market behavior. By continuously updating probabilities as conditions change, traders can make more informed, adaptive, and risk-aware decisions.
