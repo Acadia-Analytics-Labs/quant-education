@@ -49,12 +49,20 @@ const articles: Articles = {
         markdownPath: "/src/content/articles/probability-statistics/distributions.md",
       },
       {
-        title: "Bayesian Thinking for Traders",
+        title: "Probability and Bayesian Thinking",
         description:
-          "How to update your beliefs with new information using Bayesian methods",
-        difficulty: "Advanced",
+          "Introduction to probability and Bayesian / Frequentist thinking",
+        difficulty: "Beginner",
         tags: ["Bayesian Statistics", "Decision Making", "Uncertainty"],
         markdownPath: "/src/content/articles/probability-statistics/bayesian-thinking.md",
+      },
+      {
+        title: "Conditional probability and Bayes’ theorem",
+        description:
+          "How to update your beliefs with new information using Bayesian methods",
+        difficulty: "Intermediate",
+        tags: ["Bayesian Statistics", "Decision Making", "Uncertainty"],
+        markdownPath: "/src/content/articles/probability-statistics/conditional-probability.md",
       },
     ],
   },
