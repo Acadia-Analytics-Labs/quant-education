@@ -47,10 +47,14 @@ Where:
 ### Proof:
 We can derive this formula by using the conditional probability. 
 Given:
-$$P(A | B) = \frac{P(A \text{ and } B)}{P(B)} ~~~~~~~~~~~~~~~ P(B | A) = \frac{P(B \text{ and } A)}{P(A)}$$
+$$P(A | B) = \frac{P(A \text{ and } B)}{P(B)}$$ $$P(B | A) = \frac{P(B \text{ and } A)}{P(A)}$$
 The key observation is that $P(A \text{ and } B) = P(B \text{ and } A)$, since both expressions describe the same situation: A and B happen together. 
 
-As a result multiplying $P(B | A)$ by $\frac{P(A)}{P(B)}$ to $P(B | A)$ will give $P(A | B)$.
+As a result:
+
+$$\frac{P(A)}{P(B)} \cdot P(B | A) = \frac{P(B \text{ and } A)}{P(A)} \cdot \frac{P(A)}{P(B)}$$
+$$\frac{P(B | A)\cdot P(A)}{P(B)} = \frac{P(B \text{ and } A)}{P(B)} = P(A | B) $$
+ 
 
 
 ### Example:
@@ -58,7 +62,7 @@ We can again use the example of marbles in a bag to illustrate how Bayes' Theore
 
 Say we have two bags of marbles $B_1$ and $B_2$. Bag $B_1$ has 5 green marbles and 5 red marbles. Bag $B_2$ has 7 green marbles and 3 red marbles. Say you have one of these two bags but you do not know which. As such, our prior beliefs are:
 
-$$P(B_1) = \frac{1}{2} ~~~~~~~~~~~~~~~ P(B_2) = \frac{1}{2}$$
+$$P(B_1) = \frac{1}{2}$$ $$P(B_2) = \frac{1}{2}$$
 
 Say you pull a green marble from your bag. We can then update the probabilities of $B_1$ and $B_2$ using Bayes' Theorem.
 
