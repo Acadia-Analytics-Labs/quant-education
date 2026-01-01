@@ -4,7 +4,7 @@
 
 Probability is the branch of mathematics that studies events and provides numerical descriptions of how likely they are to occur. In trading, probability helps us understand and reason about uncertainty present in the market. A solid understanding of probability can lead to better-informed trading decisions.
 
-We express probabilities in the following way:
+We express probabilities in the following way: for a 50% probability,
 
 $$P(E) = 0.5$$
 
@@ -28,6 +28,12 @@ For experiments with equally likely outcomes, probability can be calculated usin
 
 $$P(E) = \frac{\text{number of favorable outcomes to } E}{\text{total number of possible outcomes}}$$
 
+### Combining Events
+Set notation can also be applied to events in probability theory.  
+The union, denoted by $A \cup B$, represents the event that at least one of the events $A$ or $B$ occurs.  
+The intersection, denoted by $A \cap B$, represents the event that both events $A$ and $B$ occur.
+The complement, denoted by $A'$, or $\overline A$, represents the event in which A does not happen.
+
 ## Interpreting Probability
 
 The way we interpret probability depends on the philosophy used in statistics. The two most common interpretations are the **Bayesian** and **Frequentist** perspectives.
@@ -48,4 +54,4 @@ Continuing with the coin example, a frequentist would say that if the coin were 
 
 ## Probability in Trading
 
-In trading, it is important to have a solid understanding of both of these statistical models. Bayesian methods are often more intuitive, as they allow traders to incorporate prior knowledge and update beliefs as new information becomes available. However, they can be sensitive to assumptions and may introduce bias through the choice of prior. On the other hand, Frequentist methods rely on long-run frequencies and fixed procedures, but they are often less intuitive and can struggle when applied to short-term or non-repeatable market events. In practice, its important to draw upon both of these statistical methods, utilizing both depending on the available data.
+In trading, it is important to have a solid understanding of both of these statistical models. Bayesian methods are often more intuitive, as they allow traders to incorporate prior knowledge and update beliefs as new information becomes available. However, they can be sensitive to assumptions and may introduce bias through the choice of prior. On the other hand, Frequentist methods rely on long-run frequencies and fixed procedures, but they are often less intuitive and can struggle when applied to short-term or non-repeatable market events. In practice, it is important to draw upon both of these statistical methods, utilizing both depending on the available data.
