@@ -186,11 +186,12 @@ const articles: Articles = {
   economics: {
     items: [
       {
-        title: "Calculus of Value",
-        description: "Mathematical foundations of value and pricing in economics",
-        difficulty: "Advanced",
-        tags: ["Economics", "Calculus", "Pricing"],
-        filename: "Calculus_Of_Value",
+        title: "Understanding Treasury Rates and Bond Market Signals",
+        description: "Comprehensive guide to interpreting Treasury yields, transmission mechanisms, and market signals with real-world examples",
+        difficulty: "Intermediate",
+        tags: ["Economics", "Bonds", "Interest Rates", "Monetary Policy", "Fixed Income"],
+        filename: "understanding-treasury-rates",
+        order: 1,
       },
       {
         title: "Day Trading Affordability Crisis",
@@ -198,6 +199,15 @@ const articles: Articles = {
         difficulty: "Intermediate",
         tags: ["Economics", "Day Trading", "Accessibility"],
         filename: "day-trading-affordability-crisis",
+        order: 2,
+      },
+      {
+        title: "Calculus of Value",
+        description: "Mathematical foundations of value and pricing in economics",
+        difficulty: "Advanced",
+        tags: ["Economics", "Calculus", "Pricing"],
+        filename: "Calculus_Of_Value",
+        order: 3,
       },
     ],
   },
