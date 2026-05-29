@@ -209,6 +209,14 @@ const articles: Articles = {
         filename: "Calculus_Of_Value",
         order: 3,
       },
+      {
+      title: "Introduction to Macroeconomics",
+      description: "An overview of core macroeconomic concepts.",
+      difficulty: "Beginner",
+      tags: ["Economics", "Macroeconomics", "GDP", "Inflation", "Unemployment"],
+      filename: "macro-econ-intro",
+      order: 4,
+    },
     ],
   },
 };
