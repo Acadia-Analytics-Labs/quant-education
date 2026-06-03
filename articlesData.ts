@@ -217,6 +217,14 @@ const articles: Articles = {
       filename: "macro-econ-intro",
       order: 4,
     },
+    {
+  title: "Introduction to Microeconomics",
+  description: "An overview of core microeconomic concepts.",
+  difficulty: "Beginner",
+  tags: ["Economics", "Microeconomics", "Utility", "Elasticity", "Market Structures"],
+  filename: "micro-econ-intro",
+  order: 5,
+    },
     ],
   },
 };
