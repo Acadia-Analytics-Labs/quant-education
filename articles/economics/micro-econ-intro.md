@@ -6,7 +6,6 @@ Microeconomics is the study of how individual decision makers (consumers, househ
 
 Microeconomics is the foundation of all economic analysis. Every macroeconomic outcome — GDP, inflation, employment, and economic growth — is the sum of all of the micro-level decisions of producers and consumers. Understanding microeconomics helps explain why prices change, why firms enter or exit markets, how consumers respond to incentives, and why government policies may succeed or fail.
 
----
 
 ## Core Concepts
 
@@ -63,7 +62,6 @@ $$\text{MRS} = \frac{P_x}{P_y}$$
 
 At this point, the consumer's subjective trade-off between goods equals the market's objective price ratio. This means that any alternative allocation would either reduce utility or exceed the consumer's budget.
 
----
 
 ### Elasticity
 
@@ -118,7 +116,6 @@ Market structure refers to the level of competition within a market and influenc
 - **Monopolistic Competition**: Many firms sell differentiated products, giving them limited pricing power 
 - **Oligopoly**: A small number of large firms dominate the market; each firm's decisions depend on competitors' actions 
 
----
 
 ## Microeconomic Processes in Practice
 
@@ -160,7 +157,6 @@ This model can be extended by adding the government and the foreign sector, intr
 
 This model serves as an important bridge between microeconomics and macroeconomics. Every utility-maximizing purchase a household makes (micro) shows up as consumer expenditure in the product market (macro). Every profit-maximizing wage a firm pays (micro) shows up as labor income in the factor market, which then flows back into household spending (macro).
 
----
 
 ## Real-World Examples
 
@@ -173,7 +169,6 @@ Microeconomic principles appear throughout everyday life:
 
 In each case, individuals and firms are making decisions that involve trade-offs, incentives, and opportunity costs.
 
----
 
 ## Formulas
 
@@ -186,7 +181,6 @@ In each case, individuals and firms are making decisions that involve trade-offs
 | Budget constraint | $(P_x \cdot Q_x) + (P_y \cdot Q_y) = \text{Income}$ |
 | General elasticity | Elasticity = % change in quantity / % change in variable |
 
----
 
 ## Applications
 
