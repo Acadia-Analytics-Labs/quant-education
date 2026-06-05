@@ -110,6 +110,13 @@ const articles: Articles = {
         tags: ["State Space", "Kalman Filter", "Time Series"],
         filename: "state-space-kalman",
       },
+      {
+  title: "Linear and Logistic Regression",
+  description: "Foundations of predictive modeling for continuous outcomes and binary classification in finance",
+  difficulty: "Intermediate",
+  tags: ["Statistics", "Machine Learning", "Quantitative Finance"],
+  filename: "linear-and-logistic-regression",
+    },
     ],
   },
   "machine-learning": {
