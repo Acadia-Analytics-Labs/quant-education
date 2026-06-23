@@ -240,6 +240,15 @@ const articles: Articles = {
         filename: "economic-theories",
         order: 6,
       },
+      {
+        title: "Monetary Economics",
+        description: "How money, interest rates, inflation, and central bank policies influence economic growth and financial markets.",
+        difficulty: "Beginner",
+        tags: ["Economics", "Macroeconomics", "Monetary Economics", "Federal Reserve", "Inflation"],
+        filename: "monetary-economics",
+        order: 7,
+      },
+
     ],
   },
 };
