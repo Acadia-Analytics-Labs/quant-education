@@ -52,7 +52,9 @@ In the short run, the AS curve slopes upward: as the price level rises, producer
 Macroeconomic equilibrium occurs at the intersection of the aggregate demand and aggregate supply curves. At this point, the economy is operating at a stable level of output and prices.
  
 When the economy experiences a recession or a boom, it moves away from equilibrium. Over time, adjustments in prices, wages, and production shift the economy toward a new equilibrium.
- 
+
+![Supply and Demand](../images/supply-demand.png)
+
 ### Inflation
  
 Inflation is a sustained increase in the general price level of goods and services over time. It is measured by indices such as the **Consumer Price Index (CPI)** or the **GDP deflator**.
