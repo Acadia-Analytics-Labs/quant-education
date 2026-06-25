@@ -248,6 +248,14 @@ const articles: Articles = {
         filename: "monetary-economics",
         order: 7,
       },
+      {
+        title: "Sovereign Wealth Funds",
+        description: "An introduction to soverign wealth funds.",
+        filename: "sovereign-wealth-funds",
+        difficulty: "Beginner",
+        tags: ["Economics", "Macroeconomics", "Investing", "Global Finance", "Government Policy"],
+        order: 8,
+},
 
     ],
   },
