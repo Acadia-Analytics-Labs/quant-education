@@ -255,7 +255,7 @@ const articles: Articles = {
         difficulty: "Beginner",
         tags: ["Economics", "Macroeconomics", "Investing", "Global Finance", "Government Policy"],
         order: 8,
-},
+      },
 
     ],
   },
