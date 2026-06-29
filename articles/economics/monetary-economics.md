@@ -121,6 +121,17 @@ When the Fed conducts a reverse repo they sell Treasuries temporarily. Investors
 
 This tends to put upward pressure on short-term interest rates or prevent them from falling too low.
 
+# Secured Overnight Financing Rate (SOFR)
+
+The Secured Overnight Financing Rate (SOFR) is the primary benchmark interest rate in the United States. It measures the cost of borrowing cash overnight when loans are secured by U.S. Treasury securities through the repurchase agreement (repo) market.
+
+SOFR is calculated from a large volume of actual overnight repo transactions, making it a transparent and reliable measure of short-term borrowing costs. It replaced the London Interbank Offered Rate (LIBOR), which was based on bank estimates rather than market transactions.
+
+SOFR closely follows the federal funds rate, but the two measure different markets. The federal funds rate reflects unsecured overnight lending between banks, while SOFR reflects secured borrowing backed by Treasury securities.
+
+Since SOFR serves as the benchmark for trillions of dollars of loans, mortgages, bonds, and derivatives, investors closely monitor it as an indicator of short-term interest rates and overall funding conditions in the financial system.
+
+
 # Treasury Securities
 
 The US Treasury issues securities to finance government operations and manage national debt. 
