@@ -101,7 +101,7 @@ The repo market (repurchase agreement market) is a financial system where instit
 
 ## Repo Agreements
 
-In a repo transaction, one party sells securities (typically treasury securities) with an agreement to repurchase them later at a slightly higher price. Financial institutions use repos to obtain short-term funding to manage liquidity needs, 
+In a repo transaction, one party sells securities (typically treasury securities) with an agreement to repurchase them later at a slightly higher price. Financial institutions use repos to obtain short-term funding to manage liquidity needs. 
 
 ## Reverse Repo Agreements
 
