@@ -107,7 +107,7 @@ In a repo transaction, one party sells securities (typically treasury securities
 
 A reverse repo is the opposite side of the repo transaction. One party lends cash and receives Treasury securities as collateral, agreeing to return the securities later.
 
-How the Federal Reserve Uses Them
+## How the Federal Reserve Uses Repos
 
 ### Repo Operations \= Adding Liquidity
 
@@ -142,9 +142,7 @@ Major Treasury instruments include:
 * Treasury Notes (2-10 years)  
 * Treasury Bonds (20–30 years)
 
-Treasury securities are often considered the safest investments because they are backed by the full faith and credit of the US government.
-
-Treasury securities are considered "risk-free" assets in many financial models because they are backed by the U.S. government. As a result, Treasury yields serve as benchmarks for pricing mortgages, corporate bonds, and many other financial assets.
+Treasury securities are often considered the safest investments and "risk-free" because they are backed by the full faith and credit of the US government. As a result, Treasury yields serve as benchmarks for pricing mortgages, corporate bonds, and many other financial assets.
 
 # Yield Curves
 
