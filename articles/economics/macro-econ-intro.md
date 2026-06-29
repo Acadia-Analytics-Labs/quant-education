@@ -52,8 +52,7 @@ In the short run, the AS curve slopes upward: as the price level rises, producer
 Macroeconomic equilibrium occurs at the intersection of the aggregate demand and aggregate supply curves. At this point, the economy is operating at a stable level of output and prices.
  
 When the economy experiences a recession or a boom, it moves away from equilibrium. Over time, adjustments in prices, wages, and production shift the economy toward a new equilibrium.
-
-![Supply and Demand](../images/supply-demand.png)
+![Supply and Demand](../images/supply-demand.svg)
 
 ### Inflation
  
