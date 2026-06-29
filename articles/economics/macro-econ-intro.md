@@ -88,12 +88,14 @@ Shifts in supply and demand affect both equilibrium price and quantity.
 ### The Business Cycle
  
 Economies do not grow in a linear pattern — they fluctuate between periods of expansion and contraction. During expansions, output rises and unemployment falls. During contractions or recessions, output declines and unemployment rises. These recurring fluctuations are known as the **business cycle**.
+![The Business Cycle](../images/business-cycle.svg)
  
 ### Production Possibility Frontier
  
-The **Production Possibility Frontier (PPF)** is a foundational economic model used to demonstrate scarcity, efficiency, and opportunity cost. It shows the maximum combinations of two goods an economy can produce when all available resources are used efficiently. Points on or inside the curve are attainable; points outside are not given current resources and technology.
+The **Production Possibility Frontier (PPF)** is a foundational economic model used to demonstrate scarcity, efficiency, and opportunity cost. It shows the maximum combinations of two goods an economy can produce when all available resources are used efficiently. Points on or inside the curve are attainable (A, B); points outside are not given current resources and technology (C).
  
 The PPF is often illustrated through the classic "guns and butter" example, which demonstrates the trade-offs economies face when allocating limited resources. The curve's concave shape reflects **increasing opportunity cost**: as an economy devotes more resources to one good, it must give up increasingly larger amounts of the other, because workers, factories, and materials are not perfectly adaptable between uses.
+![Production Possibility Frontier](../images/PPF.svg)
  
 ## Applications
  
