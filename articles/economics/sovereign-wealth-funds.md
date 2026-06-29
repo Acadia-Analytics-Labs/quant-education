@@ -24,7 +24,7 @@ During a boom year, excess revenue is put into a stabilization fund so when ther
 
 ### Long-Term Returns 
 
-Countries with large foreign exchange reserves and budget surpluses may seek investment returns that are higher than those available on traditional reserve assets such as government bonds. By investing in a broader range of assets, **reserve investment funds may** earn higher long-term returns than would otherwise be possible.
+Countries with large foreign exchange reserves and budget surpluses may seek investment returns that are higher than those available on traditional reserve assets such as government bonds. By investing in a broader range of assets, **reserve investment funds** may earn higher long-term returns than would otherwise be possible.
 
 ### Strategic Economic Development 
 
