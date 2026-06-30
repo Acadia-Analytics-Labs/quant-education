@@ -33,6 +33,7 @@ Indifference curves have several important properties:
 - Curves farther from the origin represent higher levels of utility
 
 The convex shape reflects the idea that consumers are willing to give up less and less of one good to obtain additional units of another good as that good becomes relatively abundant.
+![Indifference Curves](../images/indifference-curves.svg)
 
 ### Marginal Rate of Substitution
 
@@ -156,7 +157,7 @@ This model can be extended by adding the government and the foreign sector, intr
 - **Leakages:** taxation, savings, and imports (withdraw from the flow of income)
 
 This model serves as an important bridge between microeconomics and macroeconomics. Every utility-maximizing purchase a household makes (micro) shows up as consumer expenditure in the product market (macro). Every profit-maximizing wage a firm pays (micro) shows up as labor income in the factor market, which then flows back into household spending (macro).
-
+![Circular Flow Model](../images/circular-flow.svg)
 
 ## Real-World Examples
 
