@@ -149,6 +149,7 @@ Treasury securities are often considered the safest investments and "risk-free" 
 The yield curve plots Treasury yields across different maturities. Under normal economic conditions, longer term bonds typically offer higher yields than shorter term bonds because investors require additional compensation for uncertainty over time. 
 
 The yield curve provides insight into investor expectations for economic growth, inflation, and future Federal Reserve policy. It summarizes information from millions of market participants and economists, so investors often view it as one of the most important indicators of future economic conditions.
+![Yield Curves](../images/yield-curves.svg)
 
 ## Normal Yield Curve
 
