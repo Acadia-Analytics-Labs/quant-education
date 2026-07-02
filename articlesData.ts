@@ -256,7 +256,14 @@ const articles: Articles = {
         tags: ["Economics", "Macroeconomics", "Investing", "Global Finance", "Government Policy"],
         order: 8,
       },
-
+      {
+        title: "Fundamental Analysis vs. Technical Analysis",
+        description: "The key differences between fundamental analysis and technical analysis.",
+        filename: "fundamental-vs-technical-analysis",
+        difficulty: "Beginner",
+        tags: ["Investing", "Stock Market", "Fundamental Analysis", "Technical Analysis", "Valuation"],
+        order: 9,
+      },
     ],
   },
 };
