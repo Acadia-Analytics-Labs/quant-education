@@ -1,3 +1,10 @@
+---
+title: Linear and Logistic Regression
+description: An introduction to linear and logisitic regression, when to use each model, and their applications
+difficulty: Beginner
+tags: ["Statistics", "Regression Analysis", "Linear Regression", "Logistic Regression", "Machine Learning", "Predictive Modeling"]
+---
+
 # Linear and Logistic Regression
 
 ## Introduction
