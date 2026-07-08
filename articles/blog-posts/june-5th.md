@@ -1,3 +1,10 @@
+---
+Title: What Happened in the Markets on Friday, June 5th
+Description: An explanation of why the stock market suffered after the jobs report was released
+Difficulty: Beginner
+Tags: ["Stock Market", "Federal Reserve", "Interest Rates", "Labor Market", "Monetary Policy"]
+---
+
 # What Happened in the Markets on Friday, June 5th
 
 On Friday, June 5th, 2026, the US stock market experienced its sharpest sell-off since October. This sell-off ended a nine-week winning streak as the US jobs report fueled concerns of tighter Federal Reserve monetary policy.
