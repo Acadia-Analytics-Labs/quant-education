@@ -2,7 +2,7 @@
 Title: Introduction to Macroeconomics
 Description: An overview of the core macroeconomic concepts
 Difficulty: Beginner
-Tags: Economics, Macroeconomics, GDP, Inflation, Unemployment
+Tags: [Economics, Macroeconomics, GDP, Inflation, Unemployment]
 ---
 
 # Introduction to Macroeconomics
