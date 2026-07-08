@@ -1,3 +1,10 @@
+---
+Title: "Sovereign Wealth Funds"
+Description: "An introduction to the purpose and strategy of soverign wealth funds"
+Difficulty: "Beginner"
+Tags: ["Economics", "Macroeconomics", "Investing", "Global Finance", "Government Policy"]
+---
+
 # Sovereign Wealth Funds 
 
 ## Introduction
