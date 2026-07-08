@@ -46,6 +46,8 @@ $$\text{Salary} = 35{,}000 + 4{,}500 \times (\text{years of experience})$$
 
 This means that a new hire with zero years of experience is predicted to earn \$35,000 (the intercept), and that every additional year is associated with a \$4,500 increase in salary. So an employee with 5 years of experience would be predicted to earn $35,000 + 4,500 * (5) = $57,500.
 
+![Linear Regression](../images/linear-regression.svg)
+
 ### Multiple Linear Regression
 
 In the real world, outcomes are rarely driven by a single variable, but rather by multiple factors. Multiple linear regression extends the SLR model by adding more predictors.
@@ -177,6 +179,8 @@ P(\text{default}) = \frac{1}{1 + e^{-(-2.8)}} = \frac{1}{1 + e^{2.8}} = \frac{1}
 $$
 
 This model predicts a **5.7% probability** that the applicant will default, suggesting the borrower is relatively low risk, though not negligible.
+
+![Logistic Regression](../images/logistic-regression.svg)
 
 ### How Logistic Regression is Fitted
 
