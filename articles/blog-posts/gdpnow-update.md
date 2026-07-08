@@ -1,3 +1,10 @@
+---
+Title: Why the Atlanta Fed's GDPNow Forecast Dropped Sharply
+Description: The reasons why the GDP growth rate estimate dropped
+Difficulty: Beginner
+Tags: ["Macroeconomics", "GDP", "Federal Reserve", "Economic Indicators", "Economic Growth"]
+---
+
 # Why The Atlanta Fed’s GDPNow Forecast Dropped Sharply 
 
 On July 1, 2026, the Atlanta Fed's GDPNow model lowered its estimate for U.S. real GDP growth in the second quarter of 2026 from 2.5% to 1.2%. The revision attracted attention because just six weeks earlier the model had projected growth as high as 4.3%.
