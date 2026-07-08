@@ -1,3 +1,10 @@
+---
+Title: "Fundamental Analysis vs. Technical Analysis"
+Description: "The key differences between fundamental analysis and technical analysis"
+Difficulty: "Beginner"
+Tags: ["Investing", "Stock Market", "Fundamental Analysis", "Technical Analysis", "Valuation"]
+---
+
 # Fundamental Analysis vs Technical Analysis
 
 Fundamental analysis and technical analysis are two of the most common approaches that investors use to evaluate stocks. The main difference between the two is what they believe drives stock prices. Fundamental analysis seeks to answer the question, “Is the company worth buying?” while technical analysis focuses on “When is the best time to buy or sell?”
