@@ -1,3 +1,10 @@
+---
+Title: "The History of Economic Thought"
+Description: "An overview of classical, Keynesian, monetarist, and supply-side economics"
+Difficulty: "Beginner"
+Tags: ["Economics", "Macroeconomics", "Economic History", "Monetary Policy", "Fiscal Policy"]
+---
+
 # The History of Economic Thought
 
 ## Introduction
