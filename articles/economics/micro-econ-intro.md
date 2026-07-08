@@ -1,3 +1,10 @@
+---
+Title: Introduction to Microeconomics
+Description: An overview of the core microeconomic concepts
+Difficulty: Beginner
+Tags: [Economics, Microeconomics, Utility, Elasticity, Market Structures]
+---
+
 # Introduction to Microeconomics
 
 ## Introduction
