@@ -1,3 +1,10 @@
+---
+Title: "Monetary Economics"
+Description: "How money, interest rates, inflation, and central bank policies influence economic growth and financial markets"
+Difficulty: "Beginner"
+Tags: ["Economics", "Macroeconomics", "Monetary Economics", "Federal Reserve", "Inflation"]
+---
+
 # Monetary Economics
 
 # Introduction
