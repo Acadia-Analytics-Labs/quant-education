@@ -148,19 +148,35 @@ The components of the equation are similar to linear regression:
 
 ### Example
 
-Suppose that you want to predict whether a loan applicant will default ($y = 1$) based on their debt-to-income ratio ($x_1$) and their credit score ($x_2$). Your model would look like:
+Suppose you want to predict whether a loan applicant will default ($y = 1$) based on their **debt-to-income ratio** ($x_1$) and their **credit score** ($x_2$). Your model would look like:
 
-$$P(\text{default}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 \cdot (\text{debt-to-income ratio}) + \beta_2 \cdot (\text{credit score}))}}$$
+$$
+P(\text{default}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1 \cdot \text{debt-to-income ratio} + \beta_2 \cdot \text{credit score})}}
+$$
 
-After running the regression you find that:
+After running the regression, you find that:
 
-$$P(\text{default}) = \frac{1}{1 + e^{-(-6 + 2.5 \cdot (\text{debt-to-income ratio}) - 0.008 \cdot (\text{credit score}))}}$$
+$$
+P(\text{default}) = \frac{1}{1 + e^{-(3 + 2.5 \cdot \text{debt-to-income ratio} \ - \ 0.01 \cdot \text{credit score})}}
+$$
 
-So for an applicant with a debt-to-income ratio of 0.4 and a credit score of 680:
+The signs here make intuitive sense — $\beta_1$ is positive because a higher debt-to-income ratio should *increase* default risk, while $\beta_2$ is negative because a higher credit score should *decrease* default risk.
 
-$$P(\text{default}) = \frac{1}{1 + e^{-(-6 + 2.5(0.4) - 0.008(680))}} = 0.003$$
+For an applicant with a debt-to-income ratio of **0.4** and a credit score of **680**:
 
-This model predicts a 0.3% probability that the applicant will default, suggesting that the borrower is a low risk applicant.
+**Step 1 — Compute the linear combination inside the exponent:**
+
+$$
+3 + 2.5(0.4) - 0.01(680) = 3 + 1.0 - 6.8 = -2.8
+$$
+
+**Step 2 — Plug into the sigmoid function:**
+
+$$
+P(\text{default}) = \frac{1}{1 + e^{-(-2.8)}} = \frac{1}{1 + e^{2.8}} = \frac{1}{1 + 16.44} \approx 0.057
+$$
+
+This model predicts a **5.7% probability** that the applicant will default, suggesting the borrower is relatively low risk, though not negligible.
 
 ### How Logistic Regression is Fitted
 
