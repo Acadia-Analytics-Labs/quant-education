@@ -13,7 +13,7 @@ A DCF or Discounted Cash Flow Model is an intrinsic valuation method, meaning it
 ### The Time Value of Money 
 The most important concept in a DCF is the Time Value of Money. The Time Value of Money is boiled down into the famous saying, "A $1 today is worth more than $1 tomorrow." But why? Let's use this example: you borrow $1000 from a close friend with no interest to be repaid in a year. You might have intended to use this money to pay rent, but if you were to put this into a government bond yielding 5%, you could return the $1000 a year later and pocket the $50 of interest you made on the 5%. In this example, $1000 today is worth the same as $1050 a year from today. Therefore, a $1 today is worth more than $1 tomorrow.
 
-### Discount Rate (WACC)
+### Discount Rate
 The Discount rate is the rate at which we discount cash flows back to present value. The Discount Rate goes hand in hand with the Time Value of Money, in the example above where you borrow $1000 from your friend, we assumed that you could invest it into a government bond at 5%. This is the discount rate. We got to the conclusion that $1000 Today = $1050 in 1 year using the government bond rate (discount rate) of 5%. But, this number could be anything. We could assume you invest it into the S&P500 which returns ~7% annually. In that example our discount rate would be 7%, so $1000 today = $1070 in 1 Year.
 
 ### Enterprise Value (EV)
@@ -63,10 +63,39 @@ $$
   where $FCF_t$ = free cash flow in year $t$, $r$ = discount rate, $n$ = final projection year
 ### Step 1: Gather Historical Revenue/FCF data (10-K Filings, Financial Platforms)
 All this data is publically available for every public company. To find this information search, "Company A Investor Report Quarter _" To complete a DCF you must find a company's FCF, which includes EBIT, Tax Rate, D&A, NWC, and Capital Expenditures. The first two appear on the company's income statement, while D&A and NWC appear on it's cash flow statement, and Capital Expenditures will be on the balance sheet.
-### Step 2: Project FCF 5–10 years forward using a growth assumption
+### Step 2: Project FCF 5–10 Years Forward Using A Growth Assumption
 This is the part of the DCF that requires actual analysis. The growth rate you use largely determines what valuation you get. The market is an equilibrium, it has its own projected growth rate, and if you use the same one, you will find that your result will match that of the markets. So, this is where research and analysis comes into play, are you more bullish on this company than the market? Less bullish? Why? What aspect of the current geopolitical climent, what expectation of the company do you think is too high or low, or any other reason you have that this company will perform differently than the market expects. You must have some perceived edge over the market for the DCF to yield either a buy or sell, and this is where it comes into play.
-- Step 3: Calculate WACC
-- Step 4: Calculate Terminal Value
+### Step 3: Calculate Weighted Average Cost of Capital (WACC)
+So far, we have calculated the future cash flows of a company, but a DCF is the _discounted_ cash flows of a company, this is where WACC comes into play. WACC is the discount rate used for a DCF, but what is it conceptually? WACC is the average cost a company uses to finance its assets. An easy way to think about it is what is the average expected return on a $1 investment in the company for both equity and debt holders. So, we must calculate how much debt and equity is used in the company's capital structure, then calculate the cost of each. For debt, it is simple, just the interest rate used for the debt and preffered stock. The cost of equity is a bit more complicated, the formula is below.   
+
+**Weighted Average Cost of Capital (WACC):**
+
+$$
+WACC = r_d \cdot w_d + r_e \cdot w_e + r_p \cdot w_p
+$$
+
+**Where:**
+- $r_d$ — Cost of debt
+- $w_d$ — Weight of debt in capital structure
+- $r_e$ — Cost of equity
+- $w_e$ — Weight of equity in capital structure
+- $r_p$ — Cost of preferred stock
+- $w_p$ — Weight of preferred stock in capital structure  
+
+**Cost of Equity (CAPM)**
+
+$$
+r_e = r_f + \beta \cdot (r_m - r_f)
+$$
+
+**Where:**
+- $r_e$ — Cost of equity
+- $r_f$ — Risk-free rate
+- $\beta$ — Beta (stock's volatility relative to the market)
+- $r_m$ — Expected market return
+- $(r_m - r_f)$ — Equity risk premium
+
+### Step 4: Calculate Terminal Value
 **Terminal Value (Gordon Growth Model):**
 
 $$
@@ -75,7 +104,8 @@ $$
 
   where $g$ = long-term growth rate
 
-- Step 5: Discount FCF's and Terminal Value back to Present value using WACC
+### Step 5: Discount FCF's and Terminal Value back to Present value using WACC
+
   - **Discount factor for a given year:**
 
 $$
