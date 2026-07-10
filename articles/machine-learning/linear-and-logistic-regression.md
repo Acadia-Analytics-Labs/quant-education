@@ -1,8 +1,8 @@
 ---
-title: Linear and Logistic Regression
-description: An introduction to linear and logisitic regression, when to use each model, and their applications
-difficulty: Beginner
-tags: ["Statistics", "Regression Analysis", "Linear Regression", "Logistic Regression", "Machine Learning", "Predictive Modeling"]
+Title: Linear and Logistic Regression
+Description: An introduction to linear and logisitic regression, when to use each model, and their applications
+Difficulty: Intermediate
+Tags: ["Statistics", "Regression Analysis", "Linear Regression", "Logistic Regression", "Machine Learning", "Predictive Modeling"]
 ---
 
 # Linear and Logistic Regression
@@ -72,6 +72,8 @@ $$\text{SSR} = \sum (y_i - \hat{y}_i)^2$$
 
 In the equations, the residuals are squared for two reasons. The first is that it ensures that the positive and negative residuals don't cancel each other out. The second is that it penalizes large errors more than small ones.
 
+![OLS and Residuals](../images/ols-residuals.svg)
+
 ### Evaluating Model Fit
 
 Once the regression has been run, you need to assess how well it was able to predict the outcome.
@@ -89,6 +91,8 @@ $$R^2 = 1 - \frac{\text{SSR}}{\text{SST}}$$
 SSR is the sum of squared residuals and SST is the total sum of squares (the variance of $y$ around its mean). $R^2$ ranges from 0 to 1. So an $R^2$ of 0.85 means that the regression explains 85% of the variation in the outcome and the remaining 15% is unexplained by the predictors.
 
 A high $R^2$ does not always mean that the regression is an accurate prediction. Adding more variables to the model will increase the $R^2$ value, even if those additional variables aren't predicting anything new. Adjusted $R^2$ corrects for this by penalizing for additional predictors that don't improve accuracy.
+
+![r^2](../images/r^2.svg) 
 
 ### Assumptions
 
@@ -197,6 +201,7 @@ $\hat{p}_i$ is the model's predicted probability for an observation $i$. When $y
 Since logistic regression predicts probabilities, there are different evaluation metrics than used for linear regression.
 
 **AUC-ROC (Area Under the Curve – Receiver Operating Characteristic)** is a standard metric for binary classifiers. The ROC curve plots the true positive rate against the false positive rate at different classification thresholds. If the AUC is 1 that means that it is a perfect classifier where an AUC of 0.5 is the same as choosing randomly. For example a model with an AUC of 0.85 correctly ranks a randomly chosen positive case above a randomly chosen negative case 85% of the time.
+![AUC-ROC](../images/roc-curve.svg)
 
 **Log-loss (binary cross-entropy)** measures how well the predicted probabilities align with the true outcome where the model is penalized heavily for confident wrong predictions.
 
