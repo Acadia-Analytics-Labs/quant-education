@@ -1,4 +1,11 @@
-# Treasury Inflation-Protected Securities (TIPS)
+---
+Title: Treasury Inflation-Protected Securties
+Description: An overview of Treasury Inflation-Protected Securties 
+difficulty: Beginner
+tags: ["Bonds", "Investing", Treasury Securties", "Inflation"]
+---
+
+# Treasury Inflation-Protected Securities
 
 ## Introduction
 
