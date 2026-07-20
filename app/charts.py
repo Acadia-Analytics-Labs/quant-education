@@ -190,10 +190,12 @@ def beta_update(prior_a=2, prior_b=2, heads=8, tails=2):
     """Beta-Binomial belief update over an unknown win probability θ."""
     theta = np.linspace(0, 1, 500)
 
+    _trapz = getattr(np, "trapezoid", np.trapz)  # numpy 2.x renamed trapz
+
     def beta_pdf(t, a, b):
         # normalize numerically to avoid a Beta-function import
         raw = t ** (a - 1) * (1 - t) ** (b - 1)
-        return raw / np.trapz(raw, t)
+        return raw / _trapz(raw, t)
 
     fig, ax = _fig()
     ax.plot(theta, beta_pdf(theta, prior_a, prior_b), color=SLATE, lw=2.2,
@@ -544,6 +546,453 @@ def esg_aum_growth():
     ax.set_title("ESG assets under management (stylized, $ trillions)")
     ax.set_xlabel("Year")
     ax.set_ylabel("AUM ($T)")
+    return fig
+
+
+# ----------------------------------------------------------------------------
+# Expected value / betting (thorp, expected-value)
+# ----------------------------------------------------------------------------
+def expected_value_bars(outcomes=(-100, 150), probs=(0.55, 0.45)):
+    """Probability-weighted outcomes and the resulting expected value."""
+    outcomes = np.array(outcomes, float)
+    probs = np.array(probs, float)
+    ev = float((outcomes * probs).sum())
+    fig, ax = _fig()
+    colors = [GREEN if o >= 0 else RED for o in outcomes]
+    ax.bar(range(len(outcomes)), outcomes * probs, color=colors, edgecolor="white")
+    for i, (o, p) in enumerate(zip(outcomes, probs)):
+        ax.text(i, o * p + (3 if o > 0 else -3), f"{o:+g} × {p:.0%}",
+                ha="center", va="bottom" if o > 0 else "top", fontsize=9)
+    ax.axhline(ev, color=INK, ls="--", lw=2, label=f"E[X] = {ev:+.1f}")
+    ax.axhline(0, color=SLATE, lw=1)
+    ax.set_title("Expected value = the probability-weighted average outcome")
+    ax.set_xticks(range(len(outcomes)), [f"Outcome {i+1}" for i in range(len(outcomes))])
+    ax.set_ylabel("Contribution to E[X]")
+    ax.legend(frameon=False)
+    return fig
+
+
+def many_small_bets(edge=0.02, sd=1.0):
+    """Probability of finishing ahead rises with the NUMBER of small-edge bets."""
+    from math import erf, sqrt
+    ns = np.arange(1, 401)
+    # P(sum>0) ≈ Phi(edge*sqrt(N)/sd) via the normal CDF
+    z = edge * np.sqrt(ns) / sd
+    p = 0.5 * (1 + np.array([erf(zi / sqrt(2)) for zi in z]))
+    fig, ax = _fig()
+    ax.plot(ns, p, color=BLUE, lw=2.6)
+    ax.axhline(0.5, color=SLATE, ls=":", lw=1)
+    for n in (10, 100, 400):
+        ax.scatter([n], [p[n - 1]], color=GREEN, zorder=5)
+        ax.annotate(f"{p[n-1]:.0%}", (n, p[n - 1]), textcoords="offset points",
+                    xytext=(4, -12), fontsize=9)
+    ax.set_title(f"Thorp's edge: a tiny {edge:.0%} edge becomes near-certain over many bets")
+    ax.set_xlabel("Number of independent bets")
+    ax.set_ylabel("Probability of finishing profitable")
+    ax.set_ylim(0.4, 1.0)
+    return fig
+
+
+# ----------------------------------------------------------------------------
+# Monte Carlo / Kalman (monte-carlo, state-space-kalman)
+# ----------------------------------------------------------------------------
+def monte_carlo_paths(n_paths=250, days=252, seed=6):
+    """Fan of simulated price paths with a percentile cone and a VaR marker."""
+    r = np.random.default_rng(seed)
+    shocks = r.normal(0.0003, 0.012, (n_paths, days))
+    paths = 100 * np.exp(np.cumsum(shocks, axis=1))
+    fig, ax = _fig()
+    for i in range(min(60, n_paths)):
+        ax.plot(paths[i], color=BLUE, lw=0.5, alpha=0.18)
+    p5, p50, p95 = np.percentile(paths, [5, 50, 95], axis=0)
+    ax.plot(p50, color=INK, lw=2.2, label="median")
+    ax.fill_between(range(days), p5, p95, color=AMBER, alpha=0.25, label="5–95% cone")
+    var5 = np.percentile(paths[:, -1], 5)
+    ax.axhline(var5, color=RED, ls="--", lw=1.6, label=f"5% VaR ≈ {var5:.0f}")
+    ax.set_title(f"Monte Carlo: {n_paths} simulated futures → a distribution of outcomes")
+    ax.set_xlabel("Trading day")
+    ax.set_ylabel("Simulated price")
+    ax.legend(frameon=False, loc="upper left")
+    return fig
+
+
+def kalman_filter_demo(n=120, seed=9):
+    """Hidden true level, noisy observations, and the Kalman-filtered estimate."""
+    r = np.random.default_rng(seed)
+    true = np.cumsum(r.normal(0, 0.3, n)) + 10
+    obs = true + r.normal(0, 1.6, n)
+    # scalar Kalman filter
+    est, P, Q, R = [obs[0]], 1.0, 0.05, 2.5
+    x = obs[0]
+    for z in obs[1:]:
+        P += Q
+        K = P / (P + R)
+        x = x + K * (z - x)
+        P *= (1 - K)
+        est.append(x)
+    fig, ax = _fig()
+    ax.scatter(range(n), obs, s=14, color=SLATE, alpha=0.6, label="Noisy observations")
+    ax.plot(true, color=GREEN, lw=2.4, label="Hidden true level")
+    ax.plot(est, color=BLUE, lw=2.2, label="Kalman estimate")
+    ax.set_title("Kalman filter: recover the signal from the noise")
+    ax.set_xlabel("Time")
+    ax.set_ylabel("Level")
+    ax.legend(frameon=False, loc="upper left")
+    return fig
+
+
+def hmm_regimes(n=400, seed=12):
+    """Price path shaded by hidden regime (bull / bear / choppy)."""
+    r = np.random.default_rng(seed)
+    regimes, mus, sds = [], [0.0012, -0.0014, 0.0], [0.008, 0.014, 0.006]
+    state, out = 0, []
+    for _ in range(n):
+        if r.random() < 0.03:
+            state = int(r.integers(0, 3))
+        out.append(state)
+    rets = np.array([r.normal(mus[s], sds[s]) for s in out])
+    price = 100 * np.exp(np.cumsum(rets))
+    fig, ax = _fig()
+    names = ["Bull", "Bear", "Choppy"]
+    cols = [GREEN, RED, SLATE]
+    ax.plot(price, color=INK, lw=1.2)
+    for s in range(3):
+        mask = np.array(out) == s
+        ax.fill_between(range(n), price.min(), price.max(), where=mask,
+                        color=cols[s], alpha=0.12)
+        ax.plot([], [], color=cols[s], lw=8, alpha=0.4, label=names[s])
+    ax.set_title("Hidden Markov regimes: one price, three hidden states")
+    ax.set_xlabel("Trading day")
+    ax.set_ylabel("Price")
+    ax.legend(frameon=False, loc="upper left", ncol=3)
+    return fig
+
+
+# ----------------------------------------------------------------------------
+# Machine learning (regression, activations, curse, manifold, backtest)
+# ----------------------------------------------------------------------------
+def linear_regression_fit(seed=1):
+    """Scatter with an OLS best-fit line and residual segments."""
+    r = np.random.default_rng(seed)
+    x = np.linspace(0, 10, 40)
+    y = 2 + 1.3 * x + r.normal(0, 2.2, x.size)
+    b, a = np.polyfit(x, y, 1)
+    yhat = a + b * x
+    fig, ax = _fig()
+    for xi, yi, yh in zip(x, y, yhat):
+        ax.plot([xi, xi], [yi, yh], color=SLATE, lw=0.8, alpha=0.6)
+    ax.scatter(x, y, color=BLUE, s=32, zorder=4, label="data")
+    ax.plot(x, yhat, color=RED, lw=2.6, label=f"ŷ = {a:.1f} + {b:.2f}x")
+    ax.set_title("Linear regression: the line that minimizes squared residuals")
+    ax.set_xlabel("Feature x")
+    ax.set_ylabel("Target y")
+    ax.legend(frameon=False)
+    return fig
+
+
+def logistic_sigmoid(seed=2):
+    """The logistic curve mapping a score to a probability, with a 0.5 threshold."""
+    r = np.random.default_rng(seed)
+    x = np.linspace(-6, 6, 400)
+    s = 1 / (1 + np.exp(-x))
+    fig, ax = _fig()
+    ax.plot(x, s, color=BLUE, lw=2.8)
+    ax.axhline(0.5, color=SLATE, ls=":", lw=1)
+    ax.axvline(0, color=SLATE, ls=":", lw=1)
+    pos = r.normal(2.2, 1.2, 25); neg = r.normal(-2.2, 1.2, 25)
+    ax.scatter(pos, 1 / (1 + np.exp(-pos)), color=GREEN, s=22, label="class 1 (up)")
+    ax.scatter(neg, 1 / (1 + np.exp(-neg)), color=RED, s=22, label="class 0 (down)")
+    ax.annotate("decision threshold 0.5", (0.2, 0.55), fontsize=9, color=SLATE)
+    ax.set_title("Logistic regression squashes any score into a probability")
+    ax.set_xlabel("Linear score  w·x + b")
+    ax.set_ylabel("P(class = 1)")
+    ax.legend(frameon=False, loc="upper left")
+    return fig
+
+
+def activation_functions():
+    """Common neural-network activation functions."""
+    x = np.linspace(-5, 5, 400)
+    fig, ax = _fig()
+    ax.plot(x, 1 / (1 + np.exp(-x)), color=BLUE, lw=2.2, label="sigmoid")
+    ax.plot(x, np.tanh(x), color=GREEN, lw=2.2, label="tanh")
+    ax.plot(x, np.maximum(0, x), color=RED, lw=2.2, label="ReLU")
+    ax.plot(x, np.where(x > 0, x, 0.1 * x), color=AMBER, lw=1.8, ls="--", label="LeakyReLU")
+    ax.axhline(0, color=SLATE, lw=0.8); ax.axvline(0, color=SLATE, lw=0.8)
+    ax.set_title("Activation functions: where neural nets get their nonlinearity")
+    ax.set_xlabel("input")
+    ax.set_ylabel("output")
+    ax.set_ylim(-1.5, 5)
+    ax.legend(frameon=False, loc="upper left")
+    return fig
+
+
+def curse_of_dimensionality():
+    """Share of a hypercube's volume that sits in its outer shell vs dimension."""
+    d = np.arange(1, 26)
+    shell = 1 - 0.9**d  # fraction of volume within 10% of the boundary
+    fig, ax = _fig()
+    ax.plot(d, shell, color=VIOLET, lw=2.8, marker="o", ms=4)
+    ax.fill_between(d, 0, shell, color=VIOLET, alpha=0.12)
+    ax.axhline(1.0, color=SLATE, ls=":", lw=1)
+    ax.set_title("Curse of dimensionality: in high-D, (almost) everything is on the edge")
+    ax.set_xlabel("Number of dimensions (features)")
+    ax.set_ylabel("Fraction of volume near the surface")
+    ax.set_ylim(0, 1.05)
+    return fig
+
+
+def manifold_swiss_roll(n=1200, seed=3):
+    """A 2-D 'swiss roll' manifold embedded in 3-D — structure hides in low dimensions."""
+    r = np.random.default_rng(seed)
+    t = 1.5 * np.pi * (1 + 2 * r.random(n))
+    h = 21 * r.random(n)
+    x, y, z = t * np.cos(t), h, t * np.sin(t)
+    fig = plt.figure(figsize=(6.6, 4.4))
+    ax = fig.add_subplot(projection="3d")
+    ax.scatter(x, y, z, c=t, cmap="viridis", s=8)
+    ax.set_title("The manifold hypothesis: data lives on a low-D surface in high-D space")
+    ax.set_xlabel("x"); ax.set_ylabel("y"); ax.set_zlabel("z")
+    ax.grid(False)
+    return fig
+
+
+def backtest_overfit(seed=5):
+    """In-sample curve that looks great, out-of-sample that doesn't — overfitting."""
+    r = np.random.default_rng(seed)
+    n = 250
+    ins = 100 + np.cumsum(r.normal(0.25, 1.0, n))
+    oos = np.concatenate([ins[:n // 2], ins[n // 2] + np.cumsum(r.normal(-0.05, 1.1, n - n // 2))])
+    fig, ax = _fig()
+    ax.axvspan(0, n // 2, color=GREEN, alpha=0.06)
+    ax.axvspan(n // 2, n, color=RED, alpha=0.06)
+    ax.plot(ins, color=BLUE, lw=2.2, label="overfit backtest (in-sample)")
+    ax.plot(range(n // 2, n), oos[n // 2:], color=RED, lw=2.4, label="live / out-of-sample")
+    ax.axvline(n // 2, color=INK, ls="--", lw=1.4)
+    ax.text(n // 4, ins.max(), "in-sample", ha="center", color=GREEN, fontweight="bold")
+    ax.text(3 * n // 4, ins.max(), "out-of-sample", ha="center", color=RED, fontweight="bold")
+    ax.set_title("Backtest overfitting: the curve that falls apart out-of-sample")
+    ax.set_xlabel("Trading day")
+    ax.set_ylabel("Equity")
+    ax.legend(frameon=False, loc="upper left")
+    return fig
+
+
+def rl_reward_curve(episodes=300, seed=7):
+    """A reinforcement-learning agent's reward improving over training, with variance."""
+    r = np.random.default_rng(seed)
+    runs = np.array([np.clip(np.cumsum(r.normal(0.03, 1, episodes)) / np.arange(1, episodes + 1)
+                             * np.arange(1, episodes + 1) ** 0.0, -5, None) for _ in range(20)])
+    curve = 1 - np.exp(-np.arange(episodes) / 60)
+    band = runs.std(0) * 0.15 + 0.05
+    fig, ax = _fig()
+    ax.plot(curve, color=GREEN, lw=2.6, label="mean reward")
+    ax.fill_between(range(episodes), curve - band, curve + band, color=GREEN, alpha=0.18,
+                    label="±1 std across seeds")
+    ax.set_title("Reinforcement learning: reward climbs as the agent learns")
+    ax.set_xlabel("Training episode")
+    ax.set_ylabel("Average reward (normalized)")
+    ax.legend(frameon=False, loc="lower right")
+    return fig
+
+
+# ----------------------------------------------------------------------------
+# Valuation / DCF (intro-dcf, intro-quant-trading)
+# ----------------------------------------------------------------------------
+def dcf_discounting(r=0.10, g=0.05, years=6, fcf0=100.0):
+    """Projected free cash flows vs their present value after discounting."""
+    t = np.arange(1, years + 1)
+    fcf = fcf0 * (1 + g) ** t
+    pv = fcf / (1 + r) ** t
+    fig, ax = _fig()
+    w = 0.4
+    ax.bar(t - w / 2, fcf, w, color=SLATE, label="Projected FCF (future $)")
+    ax.bar(t + w / 2, pv, w, color=GREEN, label="Present value (today's $)")
+    for ti, f, p in zip(t, fcf, pv):
+        ax.text(ti + w / 2, p + 2, f"{p:.0f}", ha="center", fontsize=8)
+    ax.set_title(f"DCF: discounting future cash to today (r={r:.0%}, g={g:.0%})")
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Cash flow")
+    ax.legend(frameon=False)
+    return fig
+
+
+# ----------------------------------------------------------------------------
+# Economics (yield curve, bonds, TIPS, micro, macro, monetary, SWF)
+# ----------------------------------------------------------------------------
+def yield_curve():
+    """Normal, flat, and inverted Treasury yield curves."""
+    mats = np.array([0.25, 0.5, 1, 2, 3, 5, 7, 10, 20, 30])
+    fig, ax = _fig()
+    ax.plot(mats, 2.0 + 1.8 * (1 - np.exp(-mats / 6)), color=GREEN, lw=2.6, marker="o", label="Normal (healthy)")
+    ax.plot(mats, 4.0 + 0.05 * mats, color=SLATE, lw=2.2, marker="o", label="Flat (uncertain)")
+    ax.plot(mats, 4.8 - 1.4 * (1 - np.exp(-mats / 6)), color=RED, lw=2.6, marker="o", label="Inverted (recession signal)")
+    ax.set_xscale("log")
+    ax.set_xticks([0.25, 1, 2, 5, 10, 30], ["3M", "1Y", "2Y", "5Y", "10Y", "30Y"])
+    ax.set_title("The yield curve: shape signals the economy's outlook")
+    ax.set_xlabel("Maturity")
+    ax.set_ylabel("Yield (%)")
+    ax.legend(frameon=False)
+    return fig
+
+
+def bond_price_yield():
+    """The inverse relationship between a bond's price and its yield."""
+    y = np.linspace(0.01, 0.12, 200)
+    coupon, face, n = 5.0, 100.0, 10
+    price = coupon * (1 - (1 + y) ** -n) / y + face * (1 + y) ** -n
+    fig, ax = _fig()
+    ax.plot(y * 100, price, color=BLUE, lw=2.8)
+    ax.axhline(face, color=SLATE, ls=":", lw=1)
+    ax.annotate("yields ↑  →  price ↓", (8, 80), fontsize=11, color=RED, fontweight="bold")
+    ax.set_title("Bond prices move opposite to yields")
+    ax.set_xlabel("Yield to maturity (%)")
+    ax.set_ylabel("Bond price ($)")
+    return fig
+
+
+def tips_vs_nominal():
+    """Real return of a nominal bond vs TIPS across inflation scenarios."""
+    infl = np.linspace(0, 8, 100)
+    nominal_yield = 4.0
+    fig, ax = _fig()
+    ax.plot(infl, nominal_yield - infl, color=RED, lw=2.6, label="Nominal bond (real return)")
+    ax.plot(infl, np.full_like(infl, 1.5), color=GREEN, lw=2.6, label="TIPS (real return, protected)")
+    ax.axhline(0, color=SLATE, lw=1)
+    ax.fill_between(infl, nominal_yield - infl, 1.5, where=(infl > 2.5), color=GREEN, alpha=0.12)
+    ax.set_title("TIPS protect real returns when inflation rises")
+    ax.set_xlabel("Inflation rate (%)")
+    ax.set_ylabel("Real (after-inflation) return (%)")
+    ax.legend(frameon=False)
+    return fig
+
+
+def supply_demand():
+    """Supply and demand curves, equilibrium, and a demand shift."""
+    q = np.linspace(1, 10, 100)
+    demand = 12 - q
+    supply = 2 + 0.9 * q
+    demand2 = 15 - q
+    fig, ax = _fig()
+    ax.plot(q, demand, color=BLUE, lw=2.6, label="Demand")
+    ax.plot(q, supply, color=GREEN, lw=2.6, label="Supply")
+    ax.plot(q, demand2, color=BLUE, lw=1.8, ls="--", alpha=0.7, label="Demand ↑ (shift)")
+    qe = (12 - 2) / (1 + 0.9); pe = 2 + 0.9 * qe
+    ax.scatter([qe], [pe], color=RED, zorder=5, s=55)
+    ax.annotate("equilibrium", (qe, pe), textcoords="offset points", xytext=(8, 8), color=RED)
+    ax.set_title("Supply & demand set the market-clearing price")
+    ax.set_xlabel("Quantity")
+    ax.set_ylabel("Price")
+    ax.legend(frameon=False)
+    return fig
+
+
+def business_cycle():
+    """Real GDP trend with cyclical expansions and recessions."""
+    t = np.linspace(0, 24, 400)
+    trend = 100 + 2.2 * t
+    cycle = 6 * np.sin(t / 1.9)
+    gdp = trend + cycle
+    fig, ax = _fig()
+    ax.plot(t, gdp, color=BLUE, lw=2.2, label="Real GDP")
+    ax.plot(t, trend, color=SLATE, lw=1.6, ls="--", label="Long-run trend")
+    ax.fill_between(t, gdp, trend, where=(cycle < 0), color=RED, alpha=0.18, label="Recession")
+    ax.fill_between(t, gdp, trend, where=(cycle >= 0), color=GREEN, alpha=0.12, label="Expansion")
+    ax.set_title("The business cycle: expansions and recessions around trend")
+    ax.set_xlabel("Time (quarters)")
+    ax.set_ylabel("Output")
+    ax.legend(frameon=False, loc="upper left", ncol=2)
+    return fig
+
+
+def money_supply_inflation(seed=4):
+    """Stylized link between money-supply growth and inflation."""
+    r = np.random.default_rng(seed)
+    m = np.linspace(0, 15, 60)
+    infl = 0.8 * m + r.normal(0, 1.4, m.size)
+    fig, ax = _fig()
+    ax.scatter(m, infl, color=AMBER, alpha=0.7, edgecolor="white", s=36)
+    coef = np.polyfit(m, infl, 1)
+    ax.plot(m, np.polyval(coef, m), color=RED, lw=2.4, label="trend")
+    ax.set_title("Over the long run, more money growth → more inflation")
+    ax.set_xlabel("Money-supply growth (%)")
+    ax.set_ylabel("Inflation (%)")
+    ax.legend(frameon=False)
+    return fig
+
+
+def swf_sizes():
+    """Approximate assets of the largest sovereign wealth funds."""
+    funds = ["Norway\nGPFG", "China\nCIC", "Abu Dhabi\nADIA", "Kuwait\nKIA",
+             "Saudi\nPIF", "Singapore\nGIC", "Qatar\nQIA"]
+    aum = [1600, 1350, 1000, 920, 900, 800, 520]
+    fig, ax = _fig(7, 4.2)
+    ax.barh(funds[::-1], aum[::-1], color=CYAN, edgecolor="white")
+    for i, v in enumerate(aum[::-1]):
+        ax.text(v + 15, i, f"${v}B", va="center", fontsize=9)
+    ax.set_title("Largest sovereign wealth funds (approx. AUM)")
+    ax.set_xlabel("Assets under management ($B)")
+    ax.grid(axis="y", visible=False)
+    return fig
+
+
+# ----------------------------------------------------------------------------
+# Trading mechanics (ETFs, slippage, indicators)
+# ----------------------------------------------------------------------------
+def expense_ratio_drag(years=30, gross=0.07):
+    """How a small annual fee compounds into a big gap over decades."""
+    t = np.arange(0, years + 1)
+    fig, ax = _fig()
+    for fee, label, color in [(0.0003, "ETF (0.03% fee)", GREEN),
+                              (0.005, "fund (0.50% fee)", AMBER),
+                              (0.01, "fund (1.00% fee)", RED)]:
+        ax.plot(t, 10000 * (1 + gross - fee) ** t, lw=2.4, color=color, label=label)
+    ax.set_title("Fee drag: small expense ratios compound into large gaps")
+    ax.set_xlabel("Years")
+    ax.set_ylabel("Value of $10,000")
+    ax.legend(frameon=False, loc="upper left")
+    return fig
+
+
+def slippage_costs():
+    """Waterfall from gross edge to net after costs."""
+    labels = ["Gross\nedge", "Commission", "Spread", "Slippage", "Net\nedge"]
+    vals = [10.0, -1.5, -2.5, -3.0]
+    fig, ax = _fig(7, 4)
+    running = 10.0
+    ax.bar(0, 10.0, color=GREEN, edgecolor="white")
+    ax.text(0, 10.2, "10.0", ha="center", fontsize=9)
+    for i, v in enumerate(vals[1:], start=1):
+        ax.bar(i, -(-v), bottom=running + v, color=RED, edgecolor="white")
+        ax.text(i, running + v - 0.4, f"{v:.1f}", ha="center", fontsize=9, color=RED)
+        running += v
+    ax.bar(4, running, color=BLUE, edgecolor="white")
+    ax.text(4, running + 0.2, f"{running:.1f}", ha="center", fontsize=9)
+    ax.set_xticks(range(5), labels)
+    ax.axhline(0, color=SLATE, lw=1)
+    ax.set_title("Transaction costs eat the edge: gross → net")
+    ax.set_ylabel("Return (bps per trade)")
+    return fig
+
+
+def bollinger_bands(seed=15):
+    """Price with a moving average and ±2σ Bollinger bands."""
+    price = _gbm_price(n=260, seed=seed)
+    n = len(price)
+    w = 20
+    ma = np.convolve(price, np.ones(w) / w, mode="valid")
+    sd = np.array([price[i - w:i].std() for i in range(w, n + 1)])
+    x = np.arange(w - 1, n)
+    fig, ax = _fig(7.2, 4.1)
+    ax.plot(price, color="#94a3b8", lw=1.0, label="Price")
+    ax.plot(x, ma, color=BLUE, lw=2.0, label=f"{w}-day MA")
+    ax.plot(x, ma + 2 * sd, color=RED, lw=1.4, ls="--", label="+2σ")
+    ax.plot(x, ma - 2 * sd, color=GREEN, lw=1.4, ls="--", label="−2σ")
+    ax.fill_between(x, ma - 2 * sd, ma + 2 * sd, color=BLUE, alpha=0.07)
+    ax.set_title("Bollinger Bands: volatility envelope around a moving average")
+    ax.set_xlabel("Trading day")
+    ax.set_ylabel("Price")
+    ax.legend(frameon=False, fontsize=8, loc="upper left")
     return fig
 
 
