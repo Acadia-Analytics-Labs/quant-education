@@ -26,7 +26,7 @@ The goal is *not* to nail the exact turn. Traders wait for clear evidence a tren
 
 The uncomfortable truth: **most trades lose.** Typically **60–70% of trend-following trades are losers**, because markets chop sideways, breakouts turn out false, and small wiggles hit stops before a real trend develops. The system survives because the **30–40% of trades that catch genuine trends win big enough** to more than pay for all the small losses.
 
-> **The math in one line:** if 70% of trades lose ~\$100 each but 30% gain ~\$400 each, the system is profitable overall. Per 10 trades: $7(-\$100) + 3(+\$400) = -\$700 + \$1{,}200 = +\$500$.
+> **The math in one line:** if 70% of trades lose ~\$100 each but 30% gain ~\$400 each, the system is profitable overall. Per 10 trades: 7 × (−\$100) + 3 × (+\$400) = −\$700 + \$1,200 = **+\$500**.
 
 That asymmetric payoff — a fat cluster of small losses and a thin tail of large wins — is the whole engine:
 

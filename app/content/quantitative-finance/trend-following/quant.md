@@ -22,7 +22,7 @@ Define the **win/loss ratio** (payoff ratio) $k = W/L$. Then $E > 0 \iff pW > (1
 
 $$p^\star = \frac{1}{1+k} = \frac{L}{W+L}.$$
 
-With $k = 3$ (the 2:1–3:1 win/loss ratios typical of trend systems), $p^\star = 0.25$: a system winning only **25%** of the time is already profitable. This is why a 30–40% hit rate is not a defect — it is the expected operating point of a positive-skew strategy. The worked source example ($p=0.3$, $W=\$400$, $L=\$100$) gives $E = 0.3(400) - 0.7(100) = +\$50$ per trade, i.e. $+0.5L$ per trade in $R$-multiples.
+With $k = 3$ (the 2:1–3:1 win/loss ratios typical of trend systems), $p^\star = 0.25$: a system winning only **25%** of the time is already profitable. This is why a 30–40% hit rate is not a defect — it is the expected operating point of a positive-skew strategy. The worked source example ($p=0.3$, a \$400 average win $W$, a \$100 average loss $L$) gives $E = 0.3(400) - 0.7(100) = +50$ per trade, i.e. $+0.5L$ per trade in $R$-multiples.
 
 The **profit factor** (gross profit ÷ gross loss over $N$ trades) is
 

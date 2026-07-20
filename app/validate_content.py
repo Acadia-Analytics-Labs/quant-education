@@ -38,6 +38,30 @@ def check_chart(call: str) -> str | None:
     return None
 
 
+def inline_math_has_escaped_dollar(md: str) -> bool:
+    """True if any inline ``$...$`` span contains an escaped ``\\$``.
+
+    That combination breaks Streamlit's KaTeX delimiter scanner (it miscounts
+    the ``\\$`` as a delimiter), so write such amounts as plain text instead.
+    """
+    i, n, in_inline = 0, len(md), False
+    while i < n:
+        c = md[i]
+        if c == "\\" and i + 1 < n:
+            if in_inline and md[i + 1] == "$":
+                return True
+            i += 2
+            continue
+        if c == "$":
+            if i + 1 < n and md[i + 1] == "$":  # display $$...$$ — skip it
+                j = md.find("$$", i + 2)
+                i = (j + 2) if j != -1 else n
+                continue
+            in_inline = not in_inline
+        i += 1
+    return False
+
+
 def validate_file(path, tier) -> list[str]:
     issues: list[str] = []
     if not path.exists():
@@ -47,6 +71,11 @@ def validate_file(path, tier) -> list[str]:
         issues.append("does not start with an H1 (# Title)")
     comics = 0
     for kind, payload, _opts in parse_blocks(text):
+        if kind == "markdown":
+            if payload.replace(r"\$", "").count("$") % 2:
+                issues.append("unbalanced $ (a math delimiter or unescaped currency)")
+            if inline_math_has_escaped_dollar(payload):
+                issues.append(r"inline $...$ math contains an escaped \$ (breaks KaTeX)")
         if kind == "comic":
             comics += 1
             try:

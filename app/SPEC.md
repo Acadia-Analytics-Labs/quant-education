@@ -73,4 +73,7 @@ If you need a diagram not in this list, use **mermaid** or **ascii** instead. Do
 - **standard.md**: keep/clarify the source article's substance. Add **2–4 charts**, **1–2 mermaid** diagrams, and where useful an ascii sketch. Keep LaTeX the source had. End with a short "Key takeaways" list.
 - **quant.md**: go deep. Formal definitions, at least one **derivation/proof**, estimators, assumptions & where they break (e.g. fat tails vs. Gaussian, i.i.d. failures, look-ahead bias), and a short **References / further reading** list (Kelly 1956, Thorp, Merton, López de Prado, Marks memos, etc.). Use charts (esp. `*_wealth_paths`, `normal_vs_fat_tail`, `overfitting_curve`) and mermaid where they clarify. Rigor over length, but typically the richest of the three.
 - Start each file with a single `#` H1 title. Do NOT include marketing copy. Keep the Acadia tone educational.
+- **Currency:** write dollar amounts as `\$` (e.g. `\$100`, `\$1,000`) so KaTeX doesn't eat them as math. Use `$...$` / `$$...$$` **only** for real math.
+- **Never put a `\$` inside an inline `$...$` math span** — it breaks KaTeX's delimiter scanner. Write that arithmetic as plain text (`7 × (−\$100) + 3 × (+\$400) = +\$500`) instead. (`\$` inside a `$$…$$` display block is fine.)
+- Run `python validate_content.py` — it checks comics, chart calls, `$` balance, and the escaped-`\$`-in-inline-math trap.
 - This is educational content, not investment advice.
