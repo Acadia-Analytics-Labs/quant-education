@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   version="1.1"
+   viewBox="0 0 960 720"
+   font-family="Helvetica, Arial, sans-serif"
+   id="svg18"
+   sodipodi:docname="roc_curve.svg"
+   inkscape:version="1.4.4 (dcaf3e7, 2026-05-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs18" />
+  <sodipodi:namedview
+     id="namedview18"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="0.66384831"
+     inkscape:cx="434.58723"
+     inkscape:cy="383.37071"
+     inkscape:window-width="1452"
+     inkscape:window-height="738"
+     inkscape:window-x="0"
+     inkscape:window-y="33"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg18" />
+  <rect
+     x="0"
+     y="0"
+     width="960"
+     height="720"
+     fill="#ffffff"
+     id="rect1" />
+  <text
+     x="480"
+     y="55"
+     text-anchor="middle"
+     font-size="26px"
+     font-weight="bold"
+     fill="#000000"
+     id="text1">ROC Curve</text>
+  <path
+     d="M150.00 650.00 L157.00 394.71 L164.00 363.45 L171.00 343.42 L178.00 328.36 L185.00 316.17 L192.00 305.87 L199.00 296.92 L206.00 288.97 L213.00 281.81 L220.00 275.29 L227.00 269.29 L234.00 263.73 L241.00 258.54 L248.00 253.68 L255.00 249.09 L262.00 244.76 L269.00 240.64 L276.00 236.72 L283.00 232.98 L290.00 229.40 L297.00 225.97 L304.00 222.67 L311.00 219.49 L318.00 216.42 L325.00 213.46 L332.00 210.60 L339.00 207.83 L346.00 205.14 L353.00 202.53 L360.00 200.00 L367.00 197.53 L374.00 195.13 L381.00 192.79 L388.00 190.51 L395.00 188.28 L402.00 186.11 L409.00 183.99 L416.00 181.91 L423.00 179.88 L430.00 177.89 L437.00 175.95 L444.00 174.04 L451.00 172.17 L458.00 170.33 L465.00 168.53 L472.00 166.77 L479.00 165.03 L486.00 163.33 L493.00 161.65 L500.00 160.01 L507.00 158.39 L514.00 156.79 L521.00 155.22 L528.00 153.68 L535.00 152.16 L542.00 150.66 L549.00 149.19 L556.00 147.73 L563.00 146.30 L570.00 144.89 L577.00 143.49 L584.00 142.12 L591.00 140.76 L598.00 139.43 L605.00 138.10 L612.00 136.80 L619.00 135.51 L626.00 134.24 L633.00 132.98 L640.00 131.74 L647.00 130.52 L654.00 129.30 L661.00 128.10 L668.00 126.92 L675.00 125.75 L682.00 124.59 L689.00 123.44 L696.00 122.31 L703.00 121.19 L710.00 120.08 L717.00 118.98 L724.00 117.89 L731.00 116.82 L738.00 115.75 L745.00 114.70 L752.00 113.65 L759.00 112.62 L766.00 111.59 L773.00 110.58 L780.00 109.57 L787.00 108.58 L794.00 107.59 L801.00 106.61 L808.00 105.64 L815.00 104.68 L822.00 103.73 L829.00 102.79 L836.00 101.85 L843.00 100.92 L850.00 100.00 L850.00 650.00 L150.00 650.00 Z"
+     fill="#1f5fd6"
+     fill-opacity="0.12"
+     stroke="none"
+     id="path1" />
+  <path
+     d="M150 640 L150 75"
+     stroke="#000000"
+     stroke-width="3"
+     fill="none"
+     id="path2" />
+  <path
+     d="M142 85 L150 70 L158 85 Z"
+     fill="#000000"
+     id="path3" />
+  <path
+     d="M135 650 L865 650"
+     stroke="#000000"
+     stroke-width="3"
+     fill="none"
+     id="path4" />
+  <path
+     d="M855 642 L870 650 L855 658 Z"
+     fill="#000000"
+     id="path5" />
+  <text
+     x="500.0"
+     y="705"
+     text-anchor="middle"
+     font-size="20"
+     fill="#000000"
+     id="text5">False Positive Rate</text>
+  <text
+     x="60"
+     y="375.0"
+     text-anchor="middle"
+     font-size="20"
+     fill="#000000"
+     transform="rotate(-90 60 375.0)"
+     id="text6">True Positive Rate</text>
+  <path
+     d="M150 650 L150 658"
+     stroke="#000000"
+     stroke-width="2"
+     id="path6" />
+  <text
+     x="150"
+     y="680"
+     text-anchor="middle"
+     font-size="16"
+     fill="#000000"
+     id="text7">0</text>
+  <path
+     d="M142 650 L150 650"
+     stroke="#000000"
+     stroke-width="2"
+     id="path7" />
+  <text
+     x="135"
+     y="655"
+     text-anchor="end"
+     font-size="16"
+     fill="#000000"
+     id="text8">0</text>
+  <path
+     d="M325.0 650 L325.0 658"
+     stroke="#000000"
+     stroke-width="2"
+     id="path8" />
+  <text
+     x="325.0"
+     y="680"
+     text-anchor="middle"
+     font-size="16"
+     fill="#000000"
+     id="text9">0.25</text>
+  <path
+     d="M142 512.5 L150 512.5"
+     stroke="#000000"
+     stroke-width="2"
+     id="path9" />
+  <text
+     x="135"
+     y="517.5"
+     text-anchor="end"
+     font-size="16"
+     fill="#000000"
+     id="text10">0.25</text>
+  <path
+     d="M500.0 650 L500.0 658"
+     stroke="#000000"
+     stroke-width="2"
+     id="path10" />
+  <text
+     x="500.0"
+     y="680"
+     text-anchor="middle"
+     font-size="16"
+     fill="#000000"
+     id="text11">0.5</text>
+  <path
+     d="M142 375.0 L150 375.0"
+     stroke="#000000"
+     stroke-width="2"
+     id="path11" />
+  <text
+     x="135"
+     y="380.0"
+     text-anchor="end"
+     font-size="16"
+     fill="#000000"
+     id="text12">0.5</text>
+  <path
+     d="M675.0 650 L675.0 658"
+     stroke="#000000"
+     stroke-width="2"
+     id="path12" />
+  <text
+     x="675.0"
+     y="680"
+     text-anchor="middle"
+     font-size="16"
+     fill="#000000"
+     id="text13">0.75</text>
+  <path
+     d="M142 237.5 L150 237.5"
+     stroke="#000000"
+     stroke-width="2"
+     id="path13" />
+  <text
+     x="135"
+     y="242.5"
+     text-anchor="end"
+     font-size="16"
+     fill="#000000"
+     id="text14">0.75</text>
+  <path
+     d="M850.0 650 L850.0 658"
+     stroke="#000000"
+     stroke-width="2"
+     id="path14" />
+  <text
+     x="850.0"
+     y="680"
+     text-anchor="middle"
+     font-size="16"
+     fill="#000000"
+     id="text15">1.0</text>
+  <path
+     d="M142 100.0 L150 100.0"
+     stroke="#000000"
+     stroke-width="2"
+     id="path15" />
+  <text
+     x="135"
+     y="105.0"
+     text-anchor="end"
+     font-size="16"
+     fill="#000000"
+     id="text16">1.0</text>
+  <path
+     d="M150 650 L850 100"
+     stroke="#888888"
+     stroke-width="2"
+     stroke-dasharray="8,6"
+     id="path16" />
+  <text
+     x="506"
+     y="198"
+     font-size="15px"
+     fill="#888888"
+     id="text17">Random classifier (AUC = 0.5)</text>
+  <path
+     d="M150.00 650.00 L157.00 394.71 L164.00 363.45 L171.00 343.42 L178.00 328.36 L185.00 316.17 L192.00 305.87 L199.00 296.92 L206.00 288.97 L213.00 281.81 L220.00 275.29 L227.00 269.29 L234.00 263.73 L241.00 258.54 L248.00 253.68 L255.00 249.09 L262.00 244.76 L269.00 240.64 L276.00 236.72 L283.00 232.98 L290.00 229.40 L297.00 225.97 L304.00 222.67 L311.00 219.49 L318.00 216.42 L325.00 213.46 L332.00 210.60 L339.00 207.83 L346.00 205.14 L353.00 202.53 L360.00 200.00 L367.00 197.53 L374.00 195.13 L381.00 192.79 L388.00 190.51 L395.00 188.28 L402.00 186.11 L409.00 183.99 L416.00 181.91 L423.00 179.88 L430.00 177.89 L437.00 175.95 L444.00 174.04 L451.00 172.17 L458.00 170.33 L465.00 168.53 L472.00 166.77 L479.00 165.03 L486.00 163.33 L493.00 161.65 L500.00 160.01 L507.00 158.39 L514.00 156.79 L521.00 155.22 L528.00 153.68 L535.00 152.16 L542.00 150.66 L549.00 149.19 L556.00 147.73 L563.00 146.30 L570.00 144.89 L577.00 143.49 L584.00 142.12 L591.00 140.76 L598.00 139.43 L605.00 138.10 L612.00 136.80 L619.00 135.51 L626.00 134.24 L633.00 132.98 L640.00 131.74 L647.00 130.52 L654.00 129.30 L661.00 128.10 L668.00 126.92 L675.00 125.75 L682.00 124.59 L689.00 123.44 L696.00 122.31 L703.00 121.19 L710.00 120.08 L717.00 118.98 L724.00 117.89 L731.00 116.82 L738.00 115.75 L745.00 114.70 L752.00 113.65 L759.00 112.62 L766.00 111.59 L773.00 110.58 L780.00 109.57 L787.00 108.58 L794.00 107.59 L801.00 106.61 L808.00 105.64 L815.00 104.68 L822.00 103.73 L829.00 102.79 L836.00 101.85 L843.00 100.92 L850.00 100.00"
+     stroke="#1f5fd6"
+     stroke-width="4"
+     fill="none"
+     id="path17" />
+  <text
+     x="810"
+     y="96"
+     text-anchor="end"
+     font-size="20px"
+     font-weight="bold"
+     fill="#1f5fd6"
+     id="text18">AUC ≈ 0.86</text>
+</svg>

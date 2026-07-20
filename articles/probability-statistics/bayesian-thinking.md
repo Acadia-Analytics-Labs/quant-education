@@ -1,3 +1,15 @@
+---
+title: Probability Basics - Bayesian & Frequentist Perspectives
+description: Learn the fundamentals of probability theory and understand the Bayesian and Frequentist perspectives in the context of trading.
+difficulty: Beginner
+order: 1
+tags:
+  - probability
+  - bayesian
+  - frequentist
+  - statistics
+---
+
 # Probability Basics: Bayesian & Frequentist Perspectives
 
 ## Introduction

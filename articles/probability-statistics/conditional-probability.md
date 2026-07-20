@@ -1,4 +1,16 @@
-# Conditional probability & Bayes’ theorem 
+---
+title: Conditional Probability & Bayes' Theorem
+description: Understand conditional probability and learn how to apply Bayes' theorem to update beliefs based on new evidence in trading.
+difficulty: Beginner
+order: 2
+tags:
+  - probability
+  - bayes theorem
+  - conditional probability
+  - statistics
+---
+
+# Conditional probability & Bayes' theorem
 
 ## Introduction
 Conditional probability is the probability of an event occurring given that another event has already occurred. Conditional probability is especially important when new information becomes available and prior assumptions must be updated.

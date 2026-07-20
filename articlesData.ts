@@ -1,12 +1,14 @@
 // Copyright © 2025 Acadia Analytics. All rights reserved.
-// Updated articles data structure pointing to markdown files
+// Article registry for public content articles.
+// Articles are loaded from /public/content/articles/{topic}/{filename}.md at runtime.
 
 export interface Article {
   title: string;
   description: string;
   difficulty: "Beginner" | "Intermediate" | "Advanced";
   tags: string[];
-  markdownPath: string;
+  filename: string;
+  order?: number;
 }
 
 export interface ArticleCategory {
@@ -18,23 +20,49 @@ export interface Articles {
 }
 
 const articles: Articles = {
-  "trading": {
+  trading: {
     items: [
       {
-        title: "Understanding ESG Investing",
-        description:
-          "A comprehensive guide to Environmental, Social, and Governance investing, including strategies, measurement, and practical implementation",
-        difficulty: "Intermediate",
-        tags: ["ESG", "Sustainable Investing", "Risk Management", "Corporate Governance", "Impact Investing"],
-        markdownPath: "/articles/trading/esg-investing.md",
+        title: "The Thorp Edge Principle: More Bets, Not Bigger Bets",
+        description: "How Ed Thorp learned to beat casinos and Wall Street by maximizing bet frequency, not bet size",
+        difficulty: "Beginner",
+        tags: ["Money Management", "Edge", "Risk Management", "Ed Thorp"],
+        filename: "thorp-edge-principle",
       },
       {
         title: "Position Sizing and Risk Management",
-        description:
-          "Learn how to calculate optimal position sizes and manage risk across your portfolio",
+        description: "Learn how to calculate optimal position sizes and manage risk across your portfolio",
         difficulty: "Beginner",
         tags: ["Position Sizing", "Portfolio Theory"],
-        markdownPath: "/src/content/articles/trading/position-sizing.md",
+        filename: "position-sizing",
+      },
+      {
+        title: "Orders, Slippage, and Trading Costs",
+        description: "Understanding order types, execution costs, and how they impact trading performance",
+        difficulty: "Beginner",
+        tags: ["Order Types", "Execution", "Costs"],
+        filename: "orders-slippage-costs",
+      },
+      {
+        title: "Backtesting Basics",
+        description: "Fundamentals of backtesting trading strategies and avoiding common pitfalls",
+        difficulty: "Intermediate",
+        tags: ["Backtesting", "Strategy Testing"],
+        filename: "backtesting-basics",
+      },
+      {
+        title: "Technical Indicator Cheatsheet",
+        description: "Quick reference guide to common technical indicators and their applications",
+        difficulty: "Beginner",
+        tags: ["Technical Analysis", "Indicators"],
+        filename: "indicator-cheatsheet",
+      },
+      {
+        title: "ESG Investing",
+        description: "Environmental, Social, and Governance factors in investment decisions",
+        difficulty: "Intermediate",
+        tags: ["ESG", "Sustainable Investing"],
+        filename: "esg-investing",
       },
     ],
   },
@@ -42,74 +70,203 @@ const articles: Articles = {
     items: [
       {
         title: "Probability Distributions in Trading",
-        description:
-          "Understanding normal, log-normal, and fat-tailed distributions in financial markets",
+        description: "Understanding normal, log-normal, and fat-tailed distributions in financial markets",
         difficulty: "Intermediate",
         tags: ["Probability", "Statistics", "Market Behavior"],
-        markdownPath: "/src/content/articles/probability-statistics/distributions.md",
+        filename: "distributions",
       },
       {
-        title: "Probability and Bayesian Thinking",
-        description:
-          "Introduction to probability and Bayesian / Frequentist thinking",
+        title: "Bayesian Thinking for Traders",
+        description: "How to update your beliefs with new information using Bayesian methods",
+        difficulty: "Advanced",
+        tags: ["Bayesian Statistics", "Decision Making", "Uncertainty"],
+        filename: "bayesian-thinking",
+      },
+      {
+        title: "Expected Value",
+        description: "Understanding expected value and its applications in trading decisions",
         difficulty: "Beginner",
-        tags: ["Bayesian Statistics", "Decision Making", "Uncertainty"],
-        markdownPath: "/src/content/articles/probability-statistics/bayesian-thinking.md",
+        tags: ["Probability", "Expected Value"],
+        filename: "expected-value",
       },
       {
-        title: "Conditional probability and Bayes’ theorem",
-        description:
-          "How to update your beliefs with new information using Bayesian methods",
+        title: "Conditional Probability",
+        description: "Understanding conditional probability and its role in trading analysis",
         difficulty: "Intermediate",
-        tags: ["Bayesian Statistics", "Decision Making", "Uncertainty"],
-        markdownPath: "/src/content/articles/probability-statistics/conditional-probability.md",
+        tags: ["Probability", "Conditional Probability"],
+        filename: "conditional-probability",
       },
+      {
+        title: "Monte Carlo Risk Forecasting",
+        description: "Using Monte Carlo simulation for risk assessment and portfolio analysis",
+        difficulty: "Advanced",
+        tags: ["Monte Carlo", "Risk Management", "Simulation"],
+        filename: "monte-carlo-risk-forecasting",
+      },
+      {
+        title: "State Space Models and Kalman Filters",
+        description: "Introduction to state space models and Kalman filtering for time series analysis",
+        difficulty: "Advanced",
+        tags: ["State Space", "Kalman Filter", "Time Series"],
+        filename: "state-space-kalman",
+      },
+      {
+  title: "Linear and Logistic Regression",
+  description: "Foundations of predictive modeling for continuous outcomes and binary classification in finance",
+  difficulty: "Intermediate",
+  tags: ["Statistics", "Machine Learning", "Quantitative Finance"],
+  filename: "linear-and-logistic-regression",
+    },
     ],
   },
   "machine-learning": {
     items: [
       {
         title: "Introduction to Machine Learning in Trading",
-        description:
-          "Overview of ML applications in algorithmic trading and getting started",
+        description: "Overview of ML applications in algorithmic trading and getting started",
         difficulty: "Beginner",
         tags: ["Machine Learning", "Algorithmic Trading", "Getting Started"],
-        markdownPath: "/src/content/articles/machine-learning/intro-ml-trading.md",
-      },
-    ],
-  },
-  "economics": {
-    items: [
-      {
-        title: "Day Trading and the Affordability Crisis",
-        description:
-          "How the housing affordability crisis is driving young people toward high-risk trading strategies and creating demand for analytical tools",
-        difficulty: "Beginner",
-        tags: ["Day Trading", "Cryptocurrency", "Risk Management", "Prediction Markets", "Affordability Crisis"],
-        markdownPath: "/articles/economics/day-trading-affordability-crisis.md",
+        filename: "intro-ml-trading",
       },
       {
-        title: "On The Calculus of Value by Howard Marks",
-        description:
-          "Howard Marks discusses the relationship between price and value, investment psychology, and market valuation metrics",
+        title: "Model Types",
+        description: "Overview of different machine learning model types and their applications",
         difficulty: "Intermediate",
-        tags: ["Valuation", "Investment Psychology", "Market Analysis", "P/E Ratio"],
-        markdownPath: "/src/content/articles/economics/Calculus_Of_Value.md",
+        tags: ["Machine Learning", "Model Types"],
+        filename: "model-types",
+      },
+      {
+        title: "Neural Networks Foundations",
+        description: "Fundamental concepts of neural networks and deep learning",
+        difficulty: "Intermediate",
+        tags: ["Neural Networks", "Deep Learning"],
+        filename: "neural-networks-foundations",
+      },
+      {
+        title: "Curse of Dimensionality",
+        description: "Understanding the curse of dimensionality and techniques to address it",
+        difficulty: "Intermediate",
+        tags: ["Dimensionality", "Feature Engineering"],
+        filename: "curse-of-dimensionality",
+      },
+      {
+        title: "Manifold Hypothesis",
+        description: "The manifold hypothesis and its implications for machine learning",
+        difficulty: "Advanced",
+        tags: ["Manifold", "Theory"],
+        filename: "manifold-hypothesis",
+      },
+      {
+        title: "Reinforcement Learning Trading Agents",
+        description: "Foundations of using reinforcement learning for trading agent development",
+        difficulty: "Advanced",
+        tags: ["Reinforcement Learning", "Trading Agents"],
+        filename: "rl-trading-agents-foundations",
       },
     ],
   },
   "quantitative-finance": {
     items: [
       {
-        title: "Trend Following Systems",
-        description:
-          "Master systematic trading strategies that capture sustained price movements through disciplined trend identification and risk management",
+        title: "Introduction to Quantitative Trading",
+        description: "Core concepts and methods for quantitative trading strategies",
+        difficulty: "Beginner",
+        tags: ["Quantitative Finance", "Trading Strategies"],
+        filename: "intro-quant-trading",
+      },
+      {
+        title: "Trend Following",
+        description: "Understanding trend following strategies and their implementation",
         difficulty: "Intermediate",
-        tags: ["Trend Following", "Systematic Trading", "Risk Management", "Position Sizing"],
-        markdownPath: "/src/content/articles/quantitative-finance/trend-following.md",
+        tags: ["Trend Following", "Strategies"],
+        filename: "trend-following",
+      },
+      {
+        title: "HMM Market Regimes",
+        description: "Using Hidden Markov Models to identify and trade market regimes",
+        difficulty: "Advanced",
+        tags: ["HMM", "Market Regimes", "State Models"],
+        filename: "hmm-market-regimes",
+      },
+    ],
+  },
+  economics: {
+    items: [
+      {
+        title: "Understanding Treasury Rates and Bond Market Signals",
+        description: "Comprehensive guide to interpreting Treasury yields, transmission mechanisms, and market signals with real-world examples",
+        difficulty: "Intermediate",
+        tags: ["Economics", "Bonds", "Interest Rates", "Monetary Policy", "Fixed Income"],
+        filename: "understanding-treasury-rates",
+        order: 1,
+      },
+      {
+        title: "Day Trading Affordability Crisis",
+        description: "Analysis of accessibility and affordability in day trading",
+        difficulty: "Intermediate",
+        tags: ["Economics", "Day Trading", "Accessibility"],
+        filename: "day-trading-affordability-crisis",
+        order: 2,
+      },
+      {
+        title: "Calculus of Value",
+        description: "Mathematical foundations of value and pricing in economics",
+        difficulty: "Advanced",
+        tags: ["Economics", "Calculus", "Pricing"],
+        filename: "Calculus_Of_Value",
+        order: 3,
+      },
+      {
+        title: "Introduction to Macroeconomics",
+        description: "An overview of core macroeconomic concepts.",
+        difficulty: "Beginner",
+        tags: ["Economics", "Macroeconomics", "GDP", "Inflation", "Unemployment"],
+        filename: "macro-econ-intro",
+        order: 4,
+      },
+      {
+        title: "Introduction to Microeconomics",
+        description: "An overview of core microeconomic concepts.",
+        difficulty: "Beginner",
+        tags: ["Economics", "Microeconomics", "Utility", "Elasticity", "Market Structures"],
+        filename: "micro-econ-intro",
+        order: 5,
+      },
+      {
+        title: "The History of Economic Thought",
+        description: "An overview of classical, Keynesian, monetarist, and supply-side economics.",
+        difficulty: "Beginner",
+        tags: ["Economics", "Macroeconomics", "Economic History", "Monetary Policy", "Fiscal Policy"],
+        filename: "economic-theories",
+        order: 6,
+      },
+      {
+        title: "Monetary Economics",
+        description: "How money, interest rates, inflation, and central bank policies influence economic growth and financial markets.",
+        difficulty: "Beginner",
+        tags: ["Economics", "Macroeconomics", "Monetary Economics", "Federal Reserve", "Inflation"],
+        filename: "monetary-economics",
+        order: 7,
+      },
+      {
+        title: "Sovereign Wealth Funds",
+        description: "An introduction to soverign wealth funds.",
+        filename: "sovereign-wealth-funds",
+        difficulty: "Beginner",
+        tags: ["Economics", "Macroeconomics", "Investing", "Global Finance", "Government Policy"],
+        order: 8,
+      },
+      {
+        title: "Fundamental Analysis vs. Technical Analysis",
+        description: "The key differences between fundamental analysis and technical analysis.",
+        filename: "fundamental-vs-technical-analysis",
+        difficulty: "Beginner",
+        tags: ["Investing", "Stock Market", "Fundamental Analysis", "Technical Analysis", "Valuation"],
+        order: 9,
       },
     ],
   },
 };
 
 export default articles;
+
