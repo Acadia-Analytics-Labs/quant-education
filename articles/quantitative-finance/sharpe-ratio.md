@@ -1,4 +1,4 @@
-# Sharpe Ratio and Strategy Backtesting
+# Sharpe ratio and strategy backtesting
 
 ## Introduction
 
@@ -8,23 +8,23 @@ Because it combines both return and volatility into a single metric, the Sharpe 
 
 ---
 
-## Sharpe Ratio
+## Sharpe ratio
 
 The Sharpe ratio measures the excess return earned per unit of risk taken. It compares a strategy's average return above the risk-free rate to the variability of those returns.
 
 The Sharpe ratio is defined as
 
-$$
-S = \frac{R_p - R_f}{\sigma_p}
-$$
+\[
+S=\frac{R_p-R_f}{\sigma_p}
+\]
 
 where:
 
-- $R_p$ is the expected return of the portfolio or strategy.
-- $R_f$ is the risk-free rate of return.
-- $\sigma_p$ is the standard deviation of the portfolio's returns.
+- **\(R_p\)** is the expected return of the portfolio or strategy.
+- **\(R_f\)** is the risk-free rate of return.
+- **\(\sigma_p\)** is the standard deviation of the portfolio's returns.
 
-The numerator, $R_p - R_f$, is known as the **excess return**, representing the return earned above what could have been achieved with a risk-free investment. The denominator measures the volatility of the strategy. As a result, the Sharpe ratio indicates how much excess return is earned for each unit of risk.
+The numerator, **\(R_p-R_f\)**, is known as the **excess return**, representing the return earned above what could have been achieved with a risk-free investment. The denominator measures the volatility of the strategy. As a result, the Sharpe ratio indicates how much excess return is earned for each unit of risk.
 
 ### Example
 
@@ -32,15 +32,15 @@ Suppose a trading strategy has an annual return of **15%**, the risk-free rate i
 
 The Sharpe ratio is
 
-$$
-S = \frac{0.15 - 0.03}{0.10} = 1.2
-$$
+\[
+S=\frac{0.15-0.03}{0.10}=1.2
+\]
 
 This means the strategy generates **1.2 units of excess return for every unit of risk taken**.
 
 ---
 
-## Strategy Backtesting
+## Strategy backtesting
 
 One of the most common applications of the Sharpe ratio is evaluating trading strategies during backtesting. While total return measures how profitable a strategy would have been historically, it does not indicate how much risk was required to achieve those returns.
 
@@ -71,7 +71,7 @@ The Sharpe ratio is also only as reliable as the data used to calculate it. A st
 
 ---
 
-## Application in Trading
+## Application in trading
 
 The Sharpe ratio provides a simple way to compare strategies by considering both return and risk. Rather than focusing solely on profitability, traders can evaluate how efficiently a strategy generates returns relative to the volatility it experiences.
 
