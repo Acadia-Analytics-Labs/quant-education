@@ -11,17 +11,17 @@ Many quantitative trading models are built on statistical concepts that describe
 The mean is the average value of a dataset and is often interpreted as the expected value of a variable. In trading, the mean is commonly used to estimate the average return of an asset or trading strategy over a given period.
 
 \[
-\mu=\frac{1}{n}\sum_{i=1}^{n}x_i
+\mu = \frac{1}{n}\sum_{i=1}^{n} x_i
 \]
 
-where \(x_i\) represents each observation, \(n\) is the total number of observations, and \(\mu\) is the mean.
+where \[x_i\] represents each observation, \[n\] is the total number of observations, and \[\mu\] is the mean.
 
 ### Example
 
 Suppose a strategy produces daily returns of 0.01, -0.02, 0.03, 0.00, and 0.02. The mean return is
 
 \[
-\mu=\frac{0.01-0.02+0.03+0.00+0.02}{5}=0.008,
+\mu = \frac{0.01 - 0.02 + 0.03 + 0.00 + 0.02}{5} = 0.008
 \]
 
 or 0.8%.
@@ -35,10 +35,10 @@ Although the mean summarizes the average performance of a strategy, it does not 
 Variance measures how much observations differ from the mean. While the mean describes the center of a dataset, variance describes how spread out the data is around that center. In finance, variance is commonly used as a measure of volatility, with larger values indicating greater uncertainty in returns.
 
 \[
-\sigma^2=\frac{1}{n}\sum_{i=1}^{n}(x_i-\mu)^2
+\sigma^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i - \mu)^2
 \]
 
-where \(\sigma^2\) represents the variance.
+where \[\sigma^2\] represents the variance.
 
 A strategy with low variance produces returns that stay relatively close to the average, while a strategy with high variance experiences larger swings above and below the mean. Because of this, variance is often viewed as a measure of risk. Investors generally prefer strategies that provide higher expected returns while maintaining relatively low variance.
 
@@ -57,7 +57,7 @@ Many quantities in finance, such as asset returns, are continuous rather than di
 The probability that a random variable lies between two values, \(a\) and \(b\), is given by
 
 \[
-P(a \le X \le b)=\int_a^b f(x)\,dx.
+P(a \le X \le b) = \int_{a}^{b} f(x)\,dx
 \]
 
 A valid probability density function must always be nonnegative, and the total area under the curve must equal one. Rather than representing the probability of a single value, the curve shows where observations are more or less likely to occur. Regions with greater density correspond to outcomes that occur more frequently.
