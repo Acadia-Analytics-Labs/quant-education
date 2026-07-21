@@ -15,7 +15,7 @@ import pytest
 
 import content_index as ci
 from charts import CHARTS
-from renderer import parse_blocks
+from renderer import escape_currency, parse_blocks
 from validate_content import inline_math_has_escaped_dollar
 
 APP_DIR = pathlib.Path(__file__).resolve().parent.parent
@@ -86,9 +86,14 @@ def test_tier_file_exists_and_is_valid(art, tier):
     comics = 0
     for kind, payload, _opts in parse_blocks(text):
         if kind == "markdown":
-            assert payload.replace(r"\$", "").count("$") % 2 == 0, \
-                "unbalanced $ (unescaped currency or broken math)"
-            assert not inline_math_has_escaped_dollar(payload), \
+            # Assert on what KaTeX actually receives: the renderer runs
+            # escape_currency() first, and it is that output which has to be
+            # well-formed.  Checking the raw source instead would pass while
+            # the rendered page is broken.
+            rendered = escape_currency(payload)
+            assert rendered.replace(r"\$", "").count("$") % 2 == 0, \
+                "unbalanced $ after escape_currency (currency/math misread)"
+            assert not inline_math_has_escaped_dollar(rendered), \
                 r"inline $...$ math contains an escaped \$ (breaks KaTeX)"
         elif kind == "comic":
             comics += 1

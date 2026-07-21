@@ -190,7 +190,9 @@ def beta_update(prior_a=2, prior_b=2, heads=8, tails=2):
     """Beta-Binomial belief update over an unknown win probability θ."""
     theta = np.linspace(0, 1, 500)
 
-    _trapz = getattr(np, "trapezoid", np.trapz)  # numpy 2.x renamed trapz
+    # numpy 2.x renamed trapz -> trapezoid (and *removed* trapz, so the default
+    # argument of getattr would itself raise on numpy 2).
+    _trapz = np.trapezoid if hasattr(np, "trapezoid") else np.trapz
 
     def beta_pdf(t, a, b):
         # normalize numerically to avoid a Beta-function import
