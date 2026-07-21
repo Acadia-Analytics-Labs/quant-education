@@ -26,12 +26,31 @@ from comics import render_comic_from_text
 SPECIAL = {"mermaid", "comic", "chart", "ascii"}
 
 
+# Operators that mark a ``$…`` span as maths when they follow the leading number
+# *across a space*: ``$1 - 2\varepsilon$``, ``$0 < 1$``.  A real price puts an
+# ordinary word there instead ("$100 to enter").
+_MATH_AFTER_SPACE = set("+-*/^_=<>\\(){}[]|&~")
+
+
+def _closes_on_same_line(md: str, start: int) -> bool:
+    """True if an unescaped ``$`` appears before the end of this line."""
+    i, n = start, len(md)
+    while i < n and md[i] != "\n":
+        if md[i] == "$" and (i == 0 or md[i - 1] != "\\"):
+            return True
+        i += 1
+    return False
+
+
 def escape_currency(md: str) -> str:
     """Escape currency dollar signs (``$100``) so KaTeX doesn't eat them as math.
 
-    A ``$`` is treated as currency when it precedes a digit and that number is
-    *not* immediately closed by another ``$`` (which would make it inline math
-    like ``$0.5$``).  ``$$`` display math and already-escaped ``\\$`` are left
+    A ``$`` that precedes a digit is money unless the span looks like maths and
+    closes on the same line.  It looks like maths when the number runs straight
+    into another token (``$0.5$``, ``$2N$``, ``$1/(1-c)$``) or is followed,
+    across a space, by an operator (``$1 - 2\\varepsilon$``).  A real price is
+    followed by ordinary prose instead ("$100 to enter", "near $125K in
+    October").  ``$$`` display math and already-escaped ``\\$`` are left
     untouched.  This lets authors write real math and real dollar amounts in the
     same paragraph without hand-escaping every price.
     """
@@ -48,11 +67,18 @@ def escape_currency(md: str) -> str:
                 j = i + 1
                 while j < n and (md[j].isdigit() or md[j] in ",."):
                     j += 1
+                if j < n and md[j] == "$":  # inline math like $0.5$
+                    out.append(md[i:j]); i = j; continue
+                # The number runs into another token ($2N$, $1/(1-c)$), or an
+                # operator follows across a space ($1 - 2\varepsilon$).
                 k = j
                 while k < n and md[k] == " ":
                     k += 1
-                if k < n and md[k] == "$":  # inline math like $0.5$
-                    out.append(md[i:j]); i = j; continue
+                looks_mathy = (j < n and md[j] != " ") or (
+                    k < n and md[k] in _MATH_AFTER_SPACE
+                )
+                if looks_mathy and _closes_on_same_line(md, j):
+                    out.append(ch); i += 1; continue  # inline math
                 out.append("\\$"); i += 1; continue  # currency
         out.append(ch)
         i += 1

@@ -52,8 +52,13 @@ Only names from `charts.py::CHARTS` are allowed (literal args only). **Available
 - Sizing/Kelly: `kelly_curve(p,b)`, `kelly_wealth_paths(p,b)`, `portfolio_heat(risks=(1,1.5,0.8,1.2,2))`
 - Trend: `ema_crossover(fast=50,slow=200)`, `trend_equity_curve()`, `win_loss_hist()`, `diversification_smoothing()`
 - Economics: `pe_vs_forward_return()`, `price_value_convergence()`, `affordability_gap()`
-- ML: `overfitting_curve()`, `walk_forward_cv()`, `confusion_matrix_demo()`
+- ML: `overfitting_curve()`, `walk_forward_cv()`, `confusion_matrix_demo()`, `linear_regression_fit()`, `logistic_sigmoid()`, `activation_functions()`, `curse_of_dimensionality()`, `manifold_swiss_roll()`, `backtest_overfit()`, `rl_reward_curve()`
 - ESG: `esg_rating_divergence()`, `esg_aum_growth()`
+- Expected value / betting: `expected_value_bars(outcomes=(-100,150),probs=(0.55,0.45))`, `many_small_bets(edge=0.02)`
+- Simulation / filtering: `monte_carlo_paths()`, `kalman_filter_demo()`, `hmm_regimes()`
+- Valuation: `dcf_discounting(r=0.10,g=0.05)`
+- Bonds & macro: `yield_curve()`, `bond_price_yield()`, `tips_vs_nominal()`, `supply_demand()`, `business_cycle()`, `money_supply_inflation()`, `swf_sizes()`
+- Trading mechanics: `expense_ratio_drag()`, `slippage_costs()`, `bollinger_bands()`
 
 If you need a diagram not in this list, use **mermaid** or **ascii** instead. Don't invent chart names.
 
