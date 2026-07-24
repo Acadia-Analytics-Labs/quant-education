@@ -14,7 +14,7 @@ $$
 \mu = \frac{1}{n}\sum_{i=1}^{n} x_i
 $$
 
-where \[x_i\] represents each observation, \[n\] is the total number of observations, and \[\mu\] is the mean.
+where $x_i$ represents each observation, $n$ is the total number of observations, and $\mu$ is the mean.
 
 ### Example
 
@@ -38,7 +38,7 @@ $$
 \sigma^2 = \frac{1}{n}\sum_{i=1}^{n}(x_i - \mu)^2
 $$
 
-where \[\sigma^2\] represents the variance.
+where $\sigma^2$ represents the variance.
 
 A strategy with low variance produces returns that stay relatively close to the average, while a strategy with high variance experiences larger swings above and below the mean. Because of this, variance is often viewed as a measure of risk. Investors generally prefer strategies that provide higher expected returns while maintaining relatively low variance.
 
@@ -54,7 +54,7 @@ The mean and variance provide different but complementary information about a da
 
 Many quantities in finance, such as asset returns, are continuous rather than discrete. Instead of assigning probabilities to individual values, continuous variables are described using probability density functions (PDFs). A PDF specifies how probability is distributed across all possible values of a random variable.
 
-The probability that a random variable lies between two values, \(a\) and \(b\), is given by
+The probability that a random variable lies between two values, $a$ and $b$, is given by
 
 $$
 P(a \le X \le b) = \int_{a}^{b} f(x)\,dx
