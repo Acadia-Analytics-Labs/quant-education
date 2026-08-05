@@ -1,3 +1,11 @@
+---
+Title: Measuring Market Risk
+Description: How volatility, standard deviation, the VIX, and beta are used to measure market risk.
+Difficulty: Beginner
+Tags: ["Investments", "Stock Market", "Volatility", "Market Risk"]
+---
+
+
 # Measuring Market Risk
 
 Every investment involves some level of risk. Since no one can predict exactly how the markets will move, investors have developed several tools to measure and understand risk that come with certain stocks. 
