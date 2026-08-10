@@ -139,6 +139,10 @@ ARTICLES = [
          title="Trading Indicators Cheat Sheet", difficulty="Beginner",
          tags=["Indicators", "RSI", "MACD"],
          blurb="A quick tour of the most common technical indicators."),
+    dict(category="trading", slug="mutual-funds",
+         title="Mutual Funds", difficulty="Beginner",
+         tags=["Mutual Funds", "NAV", "Diversification"],
+         blurb="Pooled, professionally managed baskets — priced once a day at NAV."),
 
     # --- Economics & Markets ---
     dict(category="economics", slug="fundamental-vs-technical-analysis",

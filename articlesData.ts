@@ -64,6 +64,13 @@ const articles: Articles = {
         tags: ["ESG", "Sustainable Investing"],
         filename: "esg-investing",
       },
+      {
+        title: "Mutual Funds",
+        description: "An overview of mutual funds and the pros and cons of investing in them",
+        difficulty: "Beginner",
+        tags: ["Investments", "Portfolio Management", "Diversification", "Retirement Investing"],
+        filename: "mutual-funds",
+      },
     ],
   },
   "probability-statistics": {
