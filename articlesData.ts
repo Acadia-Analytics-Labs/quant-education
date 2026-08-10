@@ -111,6 +111,13 @@ const articles: Articles = {
         filename: "state-space-kalman",
       },
       {
+        title: "Mean, Variance & Probability Densities",
+        description: "Mean, variance, probability density functions, and the distributions they describe",
+        difficulty: "Beginner",
+        tags: ["Probability", "Statistics", "Distributions", "Density Functions"],
+        filename: "distributions-integrals-cumulative-distributions",
+      },
+      {
   title: "Linear and Logistic Regression",
   description: "Foundations of predictive modeling for continuous outcomes and binary classification in finance",
   difficulty: "Intermediate",
