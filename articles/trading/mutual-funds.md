@@ -42,7 +42,7 @@ $$
 \frac{\$500,000,000 - \$10,000,000}{49,000,000} = \$10.00
 $$
 
-Every investor who buys or sells shares that day receives the same closing NAv, regardless of when the order was placed during the market hours.
+Every investor who buys or sells shares that day receives the same closing NAV, regardless of when the order was placed during the market hours.
 
 ## Types of Mutual Funds
 
