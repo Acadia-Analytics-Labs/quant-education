@@ -142,6 +142,14 @@ Thousands of mutual funds are available, each with its own investment objective 
 
 These funds are offered by many investment companies and are commonly found in retirement plans and brokerage accounts.
 
+## Most Successful Funds 
+
+**The Fidelity Magellan Fund** was launched in 1963 and focuses on capital growth by investing in both domestic and foreign stocks. Under the management of Peter Lynch from 1977 to 1990, the fund delivered an average annual return of 29.2%, making it one of the successful mutual funds in history. 
+
+**The Vanguard Wellington Fund** was launched in 1929 and is one of the oldest mutual funds in the United States. The fund invests in a combination of stocks and bonds, with the goal of providing long-term growth while also generating income. As of 2026, the fund has delivered an average annual return of approximately 8.4% since its start, demonstrating the power of long-term, diversified investing. 
+
+**The Fidelity Contrafund** was launched in 1967 and invests primarily in large-cap companies that its managers believe are undervalued or have strong long-term growth potential. It has become one of the largest actively managed mutual funds in the United States and has provided strong long-term returns for investors.
+
 ## Pros and Cons of Mutual Funds
 
 ### Advantages
