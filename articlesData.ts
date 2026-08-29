@@ -64,6 +64,13 @@ const articles: Articles = {
         tags: ["ESG", "Sustainable Investing"],
         filename: "esg-investing",
       },
+      {
+        title: "Trading With an Edge",
+        description: "How a small statistical edge, combined with disciplined risk management, can lead to long-term trading success",
+        difficulty: "Beginner",
+        tags: ["Trading", "Investments", "Probability", "Expected Value"],
+        filename: "trading-with-edge",
+      },
     ],
   },
   "probability-statistics": {
