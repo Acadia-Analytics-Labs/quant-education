@@ -30,7 +30,7 @@ The important characteristic of an edge is that it is repeatable. If a strategy 
 
 ## Coin Flip Example
 
-Imagine a scenario where you flip a coin and if it is heads you win $1 and if it is tails you lose $1. 
+Imagine a scenario where you flip a coin and if it is heads you win \$1 and if it is tails you lose \$1. 
 
 If the coin is perfectly fair, you have a 50% chance of winning each flip. If you were to flip the coin thousands of times, your gains and losses should average out to roughly zero. 
 
@@ -45,10 +45,10 @@ Now suppose that you flip the coin 1,000 times.
 
 This means that your expected profit is:
 
-* 520 x $1 \= $520  
-* 480 x \-$1 \= \-$480
+* 520 x \$1 \= \$520  
+* 480 x \-\$1 \= \-\$480
 
-Expected profit \= $40
+Expected profit \= \$40
 
 Nothing drastic happened on any individual flip. The difference came entirely from repeating a process with a small statistical advantage many times. 
 
@@ -80,8 +80,8 @@ Another way to think about an edge is through expected value (EV). Expected valu
 
 For example, suppose a strategy has: 
 
-* A 55% chance of making $100  
-* A 45% chance of losing $100
+* A 55% chance of making \$100  
+* A 45% chance of losing \$100
 
 The expected value is:
 
@@ -89,7 +89,7 @@ $$
 (0.55 \times \$100) + (0.45 \times -\$100) = \$10
 $$
 
-On average, each trade is worth $10, even though the individual trade could still lose money. 
+On average, each trade is worth \$10, even though the individual trade could still lose money. 
 
 Professional traders seek strategies with positive expected value rather than strategies that simply have a high win rate. 
 
