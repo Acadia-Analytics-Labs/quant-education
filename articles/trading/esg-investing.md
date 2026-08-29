@@ -26,7 +26,7 @@ Social criteria examine how a company manages relationships with stakeholders:
 - **Diversity & Inclusion**: Workplace diversity, equal opportunity, pay equity
 - **Human Rights**: Supply chain labor practices, community impact
 - **Customer Welfare**: Product safety, data privacy, responsible marketing
-- **Community Relations**: Charitable giving, community development, local hiring
+- **Community Relations**: Charitable giving, community dev, local hiring
 
 ### Governance (G)
 
