@@ -1,6 +1,6 @@
 ---
 Title: Linear and Logistic Regression
-Description: An introduction to linear and logisitic regression, when to use each model, and their applications
+Description: An introduction to linear and logistic regression, when to use each model, and their applications
 Difficulty: Intermediate
 Tags: ["Statistics", "Regression Analysis", "Linear Regression", "Logistic Regression", "Machine Learning", "Predictive Modeling"]
 ---
@@ -44,7 +44,7 @@ After running the regression you find that:
 
 $$\text{Salary} = 35{,}000 + 4{,}500 \times (\text{years of experience})$$
 
-This means that a new hire with zero years of experience is predicted to earn \$35,000 (the intercept), and that every additional year is associated with a \$4,500 increase in salary. So an employee with 5 years of experience would be predicted to earn $35,000 + 4,500 * (5) = $57,500.
+This means that a new hire with zero years of experience is predicted to earn \$35,000 (the intercept), and that every additional year is associated with a \$4,500 increase in salary. So an employee with 5 years of experience would be predicted to earn \$35,000 + 4,500 * (5) = \$57,500.
 
 ![Linear Regression](../images/linear-regression.svg)
 

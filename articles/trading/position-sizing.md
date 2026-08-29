@@ -41,11 +41,11 @@ $$\text{Position Size} = \frac{\text{Risk Amount}}{\text{ATR} \times \text{ATR M
 
 Let's calculate position size for a stock trade:
 
-- Account Balance: $100,000
-- Risk per trade: 1% ($1,000)
-- Entry price: $50
-- Stop loss: $47
-- Stop loss distance: $3
+- Account Balance: \$100,000
+- Risk per trade: 1% (\$1,000)
+- Entry price: \$50
+- Stop loss: \$47
+- Stop loss distance: \$3
 
 $$\text{Position Size} = \frac{\$1,000}{\$3} = 333 \text{ shares}$$
 

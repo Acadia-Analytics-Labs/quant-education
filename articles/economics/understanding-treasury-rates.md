@@ -15,9 +15,9 @@ Yield = Annual Coupon Payment / Current Market Price
 ```
 
 ### Example:
-- A bond pays $50 annually (5% coupon on $1,000 face value)
-- If market price falls to $900: yield = $50 / $900 = 5.56%
-- If market price rises to $1,100: yield = $50 / $1,100 = 4.55%
+- A bond pays \$50 annually (5% coupon on \$1,000 face value)
+- If market price falls to \$900: yield = \$50 / \$900 = 5.56%
+- If market price rises to \$1,100: yield = \$50 / \$1,100 = 4.55%
 
 When investors sell bonds (reducing demand), prices fall and yields rise. When they buy bonds (increasing demand), prices rise and yields fall.
 
@@ -105,9 +105,9 @@ Mortgage Rate ≈ 10-Year Treasury + Credit Spread + Servicing Costs
 **Example:** If the 10-year yields 4.67%, mortgages might price around 6.5-6.9%.
 
 Impact:
-- Monthly payments on a $400,000 mortgage:
-  - At 3.5%: $1,796/month
-  - At 6.5%: $2,528/month (41% higher)
+- Monthly payments on a \$400,000 mortgage:
+  - At 3.5%: \$1,796/month
+  - At 6.5%: \$2,528/month (41% higher)
 - Qualifying income requirements increase proportionally
 - Refinancing becomes uneconomical for existing borrowers with lower rates
 

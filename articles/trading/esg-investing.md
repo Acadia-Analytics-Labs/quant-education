@@ -49,7 +49,7 @@ ESG investing has roots in socially responsible investing (SRI), which dates bac
 - **1980s**: Anti-apartheid movement drove divestment from companies in South Africa
 - **2000s**: Climate change concerns brought environmental factors to the forefront
 - **2010s**: ESG becomes mainstream as data and frameworks improve
-- **2020s**: ESG assets exceed $35 trillion globally, representing fundamental shift
+- **2020s**: ESG assets exceed \$35 trillion globally, representing fundamental shift
 
 ### Modern ESG Framework Development
 

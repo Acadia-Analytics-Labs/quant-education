@@ -28,9 +28,9 @@ Famous investors such as Benjamin Graham and Warren Buffet built their investmen
 
 ### Example 
 
-Suppose Company A is trading at $40 per share.
+Suppose Company A is trading at \$40 per share.
 
-After analyzing the company's financial statements, competitive position, and future earnings, an investor estimates the company's intrinsic value of $60 per share. 
+After analyzing the company's financial statements, competitive position, and future earnings, an investor estimates the company's intrinsic value of \$60 per share. 
 
 Since the market price is lower than the estimated intrinsic value, the investor may determine that the stock is undervalued. If the investor purchases the stock it is because they believe that the price will eventually move closer to its true value, which would give the investor a positive return. 
 
@@ -74,9 +74,9 @@ Technical analysis is most commonly used by traders with shorter investment hori
 
 ### Example 
 
-A stock has traded between $95 and $100 several times over the past six months. 
+A stock has traded between \$95 and \$100 several times over the past six months. 
 
-One day, it rises above $100 with unusually high trading volume. 
+One day, it rises above \$100 with unusually high trading volume. 
 
 A technical analyst may interpret this as a breakout, suggesting that buying pressure is increasing and the stock could continue rising.
 

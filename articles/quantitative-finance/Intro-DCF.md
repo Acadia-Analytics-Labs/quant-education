@@ -11,13 +11,13 @@ A DCF, or Discounted Cash Flow Model, is an intrinsic valuation method, meaning 
 
 ## 2. Core Concepts
 ### The Time Value of Money 
-The most important concept in a DCF is the Time Value of Money. The Time Value of Money is boiled down into the famous saying, "$1 today is worth more than $1 tomorrow." But why? Let's use this example: you borrow $1000 from a close friend with no interest, to be repaid in a year. You might have intended to use this money to pay rent, but if you were to put this into a government bond yielding 5%, you could return the $1000 a year later and pocket the $50 of interest you made on the 5%. In this example, $1000 today is worth the same as $1050 a year from today. Therefore, $1 today is worth more than $1 tomorrow.
+The most important concept in a DCF is the Time Value of Money. The Time Value of Money is boiled down into the famous saying, "\$1 today is worth more than \$1 tomorrow." But why? Let's use this example: you borrow \$1000 from a close friend with no interest, to be repaid in a year. You might have intended to use this money to pay rent, but if you were to put this into a government bond yielding 5%, you could return the \$1000 a year later and pocket the \$50 of interest you made on the 5%. In this example, \$1000 today is worth the same as \$1050 a year from today. Therefore, \$1 today is worth more than \$1 tomorrow.
 
 ### Discount Rate
-The discount rate is the rate at which we discount cash flows back to present value. The discount rate goes hand in hand with the Time Value of Money. In the example above where you borrow $1000 from your friend, we assumed that you could invest it into a government bond at 5%. This is the discount rate. We got to the conclusion that $1000 today = $1050 in 1 year using the government bond rate (discount rate) of 5%. But this number could be anything. We could assume you invest it into the S&P 500, which returns ~7% annually. In that example our discount rate would be 7%, so $1000 today = $1070 in 1 year.
+The discount rate is the rate at which we discount cash flows back to present value. The discount rate goes hand in hand with the Time Value of Money. In the example above where you borrow \$1000 from your friend, we assumed that you could invest it into a government bond at 5%. This is the discount rate. We got to the conclusion that \$1000 today = \$1050 in 1 year using the government bond rate (discount rate) of 5%. But this number could be anything. We could assume you invest it into the S&P 500, which returns ~7% annually. In that example our discount rate would be 7%, so \$1000 today = \$1070 in 1 year.
 
 ### Enterprise Value (EV)
-Enterprise Value (EV) is the intrinsic value of the entire company. The easiest way to understand this is using a house as an example. Say you buy a house for $100k, and put down $20k as a down payment and finance the other $80k with debt. The Enterprise Value is $100k, the total value of the house. The equity value would be $20k, because that's the part of the house you actually own, while the remaining $80k is debt. When the DCF is complete, the value we get is the EV (the whole house).
+Enterprise Value (EV) is the intrinsic value of the entire company. The easiest way to understand this is using a house as an example. Say you buy a house for \$100k, and put down \$20k as a down payment and finance the other \$80k with debt. The Enterprise Value is \$100k, the total value of the house. The equity value would be \$20k, because that's the part of the house you actually own, while the remaining \$80k is debt. When the DCF is complete, the value we get is the EV (the whole house).
 
 ### Free Cash Flow (FCF) 
 In a DCF it is most common to use unlevered free cash flow (UFCF). In simple terms, it is the profit that a company makes from its core operations before paying off any debt. But why specifically UFCF? In a DCF we are "solving" for Enterprise Value (EV), so we have to account for profit that is attributable to both debt and equity holders. The equation for UFCF is below.
@@ -66,7 +66,7 @@ All this data is publicly available for every public company. To find this infor
 ### Step 2: Project FCF 5–10 Years Forward Using A Growth Assumption
 This is the part of the DCF that requires actual analysis. The growth rate you use largely determines what valuation you get. The market is an equilibrium; it has its own projected growth rate, and if you use the same one, you will find that your result will match that of the market. So, this is where research and analysis come into play. Are you more bullish on this company than the market? Less bullish? Why? What aspect of the current geopolitical climate, what expectation of the company do you think is too high or low, or any other reason you have that this company will perform differently than the market expects. You must have some perceived edge over the market for the DCF to yield either a buy or sell, and this is where it comes into play.
 ### Step 3: Calculate Weighted Average Cost of Capital (WACC)
-So far, we have calculated the future cash flows of a company, but a DCF is the *discounted* cash flows of a company. This is where WACC comes into play. WACC is the discount rate used for a DCF, but what is it conceptually? WACC is the average cost a company uses to finance its assets. An easy way to think about it is: what is the average expected return on a $1 investment in the company for both equity and debt holders. So, we must calculate how much debt and equity are used in the company's capital structure, then calculate the cost of each. For debt, it is simple: just the interest rate used for the debt and preferred stock. The cost of equity is a bit more complicated. The formula is below.   
+So far, we have calculated the future cash flows of a company, but a DCF is the *discounted* cash flows of a company. This is where WACC comes into play. WACC is the discount rate used for a DCF, but what is it conceptually? WACC is the average cost a company uses to finance its assets. An easy way to think about it is: what is the average expected return on a \$1 investment in the company for both equity and debt holders. So, we must calculate how much debt and equity are used in the company's capital structure, then calculate the cost of each. For debt, it is simple: just the interest rate used for the debt and preferred stock. The cost of equity is a bit more complicated. The formula is below.   
 
 **Weighted Average Cost of Capital (WACC):**
 
@@ -185,7 +185,7 @@ $$
 | PV of Terminal Value | 246 |
 | **Enterprise Value** | **340** |
 | Shares Outstanding (mm) | 20.0 |
-| **Implied Price Per Share** | **$16.99** |
+| **Implied Price Per Share** | **\$16.99** |
 
 ### Sensitivity Table: Price Per Share
 *Rows = Discount Rate (WACC), Columns = Long-Term Growth Rate (g)*

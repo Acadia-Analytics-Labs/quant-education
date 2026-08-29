@@ -1,8 +1,8 @@
 ---
-Title: Treasury Inflation-Protected Securties
-Description: An overview of Treasury Inflation-Protected Securties 
+Title: Treasury Inflation-Protected Securities
+Description: An overview of Treasury Inflation-Protected Securities
 difficulty: Beginner
-tags: ["Bonds", "Investing", Treasury Securties", "Inflation"]
+tags: ["Bonds", "Investing", "Treasury Securities", "Inflation"]
 ---
 
 # Treasury Inflation-Protected Securities
@@ -31,25 +31,25 @@ When an investor buys a TIPS bond, they receive an initial principal amount. Thi
 
 If inflation increases, the principal value rises, and if prices fall (deflation), the principal value decreases. 
 
-For example, suppose an investor buys $1,000 of TIPS. If inflation rises by 3%, the adjusted principal increases to:  
+For example, suppose an investor buys \$1,000 of TIPS. If inflation rises by 3%, the adjusted principal increases to:  
 	  
-$$1{,}000 \\times (1 \+ 0.03) \= 1{,}030$$
+$$1{,}000 \times (1 + 0.03) = 1{,}030$$
 
-The investor now earns interest based on the higher $1,030 principal. 
+The investor now earns interest based on the higher \$1,030 principal. 
 
 ### 2\. Fixed Interest Rate
 
 TIPS pays a fixed interest rate, known as the coupon rate. However, because the principal changes with inflation, the actual dollar amount of interest payments changes as well.
 
-For example for a bond with an initial principal of $1,000 and a coupon rate of 2%
+For example for a bond with an initial principal of \$1,000 and a coupon rate of 2%
 
 The first interest payment would be:
 
-$$1{,}000 \\times 0.02 \= 20$$
+$$1{,}000 \times 0.02 = 20$$
 
 After 3% inflation:
 
-$$1{,}030 \\times 0.02 \= 20.60$$
+$$1{,}030 \times 0.02 = 20.60$$
 
 As inflation increases the principal, interest payments also rise. 
 
@@ -70,11 +70,11 @@ For example:
 
 The difference between the yields is known as the breakeven inflation rate. 
 
-$$\\text{Breakeven Inflation Rate} \= \\text{Nominal Treasury Yield} \- \\text{TIPS Real Yield}$$
+$$\text{Breakeven Inflation Rate} = \text{Nominal Treasury Yield} - \text{TIPS Real Yield}$$
 
 So for this example the breakeven inflation rate would be:
 
-$$4.5\\% \- 2.0\\% \= 2.5\\%$$
+$$4.5\% - 2.0\% = 2.5\%$$
 
 The market is implying that investors expect inflation to average about 2.5% over the next 10 years. If actual inflation is higher than the breakeven rate, TIPS will outperform traditional Treasury bonds. If inflation is lower, traditional Treasury bonds will perform better. 
 

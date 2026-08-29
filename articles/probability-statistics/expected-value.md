@@ -82,8 +82,8 @@ Another common mistake is assuming expected value describes what is most likely 
 ### Example
 
 A trade with:
-- 99% chance of losing $1
-- 1% chance of winning $200
+- 99% chance of losing \$1
+- 1% chance of winning \$200
 
 Has expected value:
 

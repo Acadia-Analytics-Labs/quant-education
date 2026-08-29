@@ -58,6 +58,13 @@ const articles: Articles = {
         filename: "indicator-cheatsheet",
       },
       {
+        title: "Exchange-Traded Funds",
+        description: "An overview of ETFs and the pros and cons of investing in them",
+        difficulty: "Beginner",
+        tags: ["Investing", "Portfolios", "Stocks"],
+        filename: "etfs",
+      },
+      {
         title: "ESG Investing",
         description: "Environmental, Social, and Governance factors in investment decisions",
         difficulty: "Intermediate",
@@ -110,13 +117,6 @@ const articles: Articles = {
         tags: ["State Space", "Kalman Filter", "Time Series"],
         filename: "state-space-kalman",
       },
-      {
-  title: "Linear and Logistic Regression",
-  description: "Foundations of predictive modeling for continuous outcomes and binary classification in finance",
-  difficulty: "Intermediate",
-  tags: ["Statistics", "Machine Learning", "Quantitative Finance"],
-  filename: "linear-and-logistic-regression",
-    },
     ],
   },
   "machine-learning": {
@@ -163,6 +163,13 @@ const articles: Articles = {
         tags: ["Reinforcement Learning", "Trading Agents"],
         filename: "rl-trading-agents-foundations",
       },
+      {
+        title: "Linear and Logistic Regression",
+        description: "An introduction to linear and logistic regression, when to use each model, and their applications",
+        difficulty: "Intermediate",
+        tags: ["Statistics", "Regression Analysis", "Linear Regression", "Logistic Regression", "Machine Learning", "Predictive Modeling"],
+        filename: "linear-and-logistic-regression",
+      },
     ],
   },
   "quantitative-finance": {
@@ -187,6 +194,13 @@ const articles: Articles = {
         difficulty: "Advanced",
         tags: ["HMM", "Market Regimes", "State Models"],
         filename: "hmm-market-regimes",
+      },
+      {
+        title: "The Discounted Cash Flow Model: A Framework for Traders",
+        description: "A practical introduction to DCF valuation for both day traders and long-term investors, covering core mechanics, real-world application, and key limitations",
+        difficulty: "Intermediate",
+        tags: ["Valuation", "DCF", "Trading", "Fundamental Analysis"],
+        filename: "Intro-DCF",
       },
     ],
   },
@@ -255,6 +269,14 @@ const articles: Articles = {
         difficulty: "Beginner",
         tags: ["Economics", "Macroeconomics", "Investing", "Global Finance", "Government Policy"],
         order: 8,
+      },
+      {
+        title: "Treasury Inflation-Protected Securities",
+        description: "An overview of Treasury Inflation-Protected Securities",
+        difficulty: "Beginner",
+        tags: ["Bonds", "Investing", "Treasury Securities", "Inflation"],
+        filename: "tips",
+        order: 10,
       },
       {
         title: "Fundamental Analysis vs. Technical Analysis",

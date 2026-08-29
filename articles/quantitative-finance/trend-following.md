@@ -21,7 +21,7 @@ Dennis taught these novices a complete trend-following system that included:
 
 ### The Results
 
-The experiment's results were extraordinary. Over the next four years, the Turtles collectively earned more than $175 million. Many individual Turtles achieved annual returns exceeding 100%, demonstrating that a disciplined, rule-based trend-following approach could indeed be taught and successfully implemented by people with no prior trading experience.
+The experiment's results were extraordinary. Over the next four years, the Turtles collectively earned more than \$175 million. Many individual Turtles achieved annual returns exceeding 100%, demonstrating that a disciplined, rule-based trend-following approach could indeed be taught and successfully implemented by people with no prior trading experience.
 
 ### Key Lessons from the Turtle Experiment
 
@@ -52,7 +52,7 @@ A counterintuitive but critical aspect of trend following is that **most trades 
 
 However, a robust trend-following system compensates for these frequent small losses by generating substantially larger gains from the 30-40% of trades that capture genuine trends. The key is ensuring that your winning trades produce profits that exceed the cumulative losses from unsuccessful trades.
 
-**The mathematical foundation:** If 70% of trades lose an average of $100 each, but the remaining 30% gain an average of $400 each, the system remains profitable overall.
+**The mathematical foundation:** If 70% of trades lose an average of \$100 each, but the remaining 30% gain an average of \$400 each, the system remains profitable overall.
 
 ## Building a Trend Following System
 
@@ -94,9 +94,9 @@ Position sizing determines how many contracts or shares to trade for each signal
 - **Risk Tolerance:** The maximum amount you're willing to lose per trade
 
 **Calculation Example:**
-- Stock's average daily movement (ATR): $5
-- Your maximum acceptable daily risk: $50
-- Position size: $50 ÷ $5 = 10 contracts
+- Stock's average daily movement (ATR): \$5
+- Your maximum acceptable daily risk: \$50
+- Position size: \$50 ÷ \$5 = 10 contracts
 
 This ensures that even on high-volatility days, your maximum loss remains within acceptable limits.
 

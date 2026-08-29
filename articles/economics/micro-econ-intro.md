@@ -129,13 +129,13 @@ Market structure refers to the level of competition within a market and influenc
 
 ### Consumer Choice and Budget Constraints
 
-Imagine a student has $40 to spend on two goods: books ($8 each) and coffees ($5 each).
+Imagine a student has \$40 to spend on two goods: books (\$8 each) and coffees (\$5 each).
 
 His budget constraint defines all affordable combinations. For example, he could purchase:
 
 - 5 books and 0 coffees
 - 0 books and 8 coffees
-- Any other combination that costs $40 or less
+- Any other combination that costs \$40 or less
 
 The slope of the budget line is:
 

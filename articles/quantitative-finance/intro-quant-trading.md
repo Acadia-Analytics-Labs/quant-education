@@ -65,14 +65,14 @@ Founded by mathematician Jim Simons in 1982, Renaissance Technologies operates t
 
 **Key Achievements:**
 - The flagship Medallion Fund has generated approximately 66% average annual returns (before fees) since 1988
-- Cumulative trading profits exceeding $100 billion since inception
+- Cumulative trading profits exceeding \$100 billion since inception
 - Maintains secrecy around specific strategies but is known for high-frequency statistical arbitrage and pattern recognition
 
 **Philosophy:** Renaissance believes that market inefficiencies exist at very short timeframes and can be exploited through sophisticated mathematical models that identify subtle statistical patterns invisible to human traders.
 
 ### Two Sigma
 
-Founded in 2001 by John Overdeck and David Siegel, Two Sigma applies advanced technology and data science to investment management. The firm manages over $60 billion in assets using machine learning, distributed computing, and artificial intelligence.
+Founded in 2001 by John Overdeck and David Siegel, Two Sigma applies advanced technology and data science to investment management. The firm manages over \$60 billion in assets using machine learning, distributed computing, and artificial intelligence.
 
 **Approach:**
 - Processes massive datasets including traditional price data, alternative data (satellite imagery, credit card transactions), and news sentiment
@@ -83,7 +83,7 @@ Founded in 2001 by John Overdeck and David Siegel, Two Sigma applies advanced te
 
 ### D.E. Shaw Group
 
-Founded by computer scientist David E. Shaw in 1988, D.E. Shaw Group was among the first firms to apply computational methods to financial markets. With over $60 billion in assets under management, the firm combines quantitative and fundamental research.
+Founded by computer scientist David E. Shaw in 1988, D.E. Shaw Group was among the first firms to apply computational methods to financial markets. With over \$60 billion in assets under management, the firm combines quantitative and fundamental research.
 
 **Contributions:**
 - Early pioneer of statistical arbitrage (pairs trading)
@@ -97,7 +97,7 @@ Founded by computer scientist David E. Shaw in 1988, D.E. Shaw Group was among t
 Founded by Ken Griffin in 1990, Citadel has grown into one of the world's largest alternative investment firms. While not exclusively quantitative, Citadel's quantitative trading divisions employ advanced mathematical models across global markets.
 
 **Scale and Scope:**
-- Manages over $50 billion across multiple strategies
+- Manages over \$50 billion across multiple strategies
 - Employs thousands of technologists and quantitative researchers
 - Operates in equities, fixed income, commodities, and currencies
 - Known for high-frequency trading as well as longer-term quantitative strategies
