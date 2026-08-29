@@ -1,3 +1,14 @@
+---
+title: Sharpe Ratio and Strategy Backtesting
+description: Measuring return per unit of risk, and using it to compare and evaluate trading strategies in a backtest.
+difficulty: Intermediate
+tags:
+  - Sharpe Ratio
+  - Risk-Adjusted Return
+  - Backtesting
+  - Performance Metrics
+---
+
 # Sharpe ratio and strategy backtesting
 
 ## Introduction
@@ -14,17 +25,15 @@ The Sharpe ratio measures the excess return earned per unit of risk taken. It co
 
 The Sharpe ratio is defined as
 
-\[
-S=\frac{R_p-R_f}{\sigma_p}
-\]
+$$S=\frac{R_p-R_f}{\sigma_p}$$
 
 where:
 
-- **\(R_p\)** is the expected return of the portfolio or strategy.
-- **\(R_f\)** is the risk-free rate of return.
-- **\(\sigma_p\)** is the standard deviation of the portfolio's returns.
+- **$R_p$** is the expected return of the portfolio or strategy.
+- **$R_f$** is the risk-free rate of return.
+- **$\sigma_p$** is the standard deviation of the portfolio's returns.
 
-The numerator, **\(R_p-R_f\)**, is known as the **excess return**, representing the return earned above what could have been achieved with a risk-free investment. The denominator measures the volatility of the strategy. As a result, the Sharpe ratio indicates how much excess return is earned for each unit of risk.
+The numerator, **$R_p-R_f$**, is known as the **excess return**, representing the return earned above what could have been achieved with a risk-free investment. The denominator measures the volatility of the strategy. As a result, the Sharpe ratio indicates how much excess return is earned for each unit of risk.
 
 ### Example
 
@@ -32,9 +41,7 @@ Suppose a trading strategy has an annual return of **15%**, the risk-free rate i
 
 The Sharpe ratio is
 
-\[
-S=\frac{0.15-0.03}{0.10}=1.2
-\]
+$$S=\frac{0.15-0.03}{0.10}=1.2$$
 
 This means the strategy generates **1.2 units of excess return for every unit of risk taken**.
 
