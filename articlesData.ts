@@ -209,6 +209,13 @@ const articles: Articles = {
         tags: ["HMM", "Market Regimes", "State Models"],
         filename: "hmm-market-regimes",
       },
+      {
+        title: "Sharpe Ratio and Strategy Backtesting",
+        description: "Measuring return per unit of risk, and using it to compare and evaluate trading strategies in a backtest",
+        difficulty: "Intermediate",
+        tags: ["Sharpe Ratio", "Risk-Adjusted Return", "Backtesting", "Performance Metrics"],
+        filename: "sharpe-ratio",
+      },
     ],
   },
   economics: {
