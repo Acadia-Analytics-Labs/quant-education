@@ -71,6 +71,13 @@ const articles: Articles = {
         tags: ["Trading", "Investments", "Probability", "Expected Value"],
         filename: "trading-with-edge",
       },
+      {
+        title: "Measuring Market Risk",
+        description: "How volatility, standard deviation, the VIX, and beta are used to measure market risk.",
+        difficulty: "Beginner",
+        tags: ["Investments", "Stock Market", "Volatility", "Market Risk"],
+        filename: "volatility",
+      },
     ],
   },
   "probability-statistics": {
@@ -116,6 +123,13 @@ const articles: Articles = {
         difficulty: "Advanced",
         tags: ["State Space", "Kalman Filter", "Time Series"],
         filename: "state-space-kalman",
+      },
+      {
+        title: "Mean, Variance & Probability Densities",
+        description: "Mean, variance, probability density functions, and the distributions they describe",
+        difficulty: "Beginner",
+        tags: ["Probability", "Statistics", "Distributions", "Density Functions"],
+        filename: "distributions-integrals-cumulative-distributions",
       },
       {
   title: "Linear and Logistic Regression",
