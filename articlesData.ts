@@ -65,6 +65,20 @@ const articles: Articles = {
         filename: "esg-investing",
       },
       {
+        title: "Trading With an Edge",
+        description: "How a small statistical edge, combined with disciplined risk management, can lead to long-term trading success",
+        difficulty: "Beginner",
+        tags: ["Trading", "Investments", "Probability", "Expected Value"],
+        filename: "trading-with-edge",
+      },
+      {
+        title: "Measuring Market Risk",
+        description: "How volatility, standard deviation, the VIX, and beta are used to measure market risk.",
+        difficulty: "Beginner",
+        tags: ["Investments", "Stock Market", "Volatility", "Market Risk"],
+        filename: "volatility",
+      },
+      {
         title: "Mutual Funds",
         description: "An overview of mutual funds and the pros and cons of investing in them",
         difficulty: "Beginner",
@@ -116,6 +130,13 @@ const articles: Articles = {
         difficulty: "Advanced",
         tags: ["State Space", "Kalman Filter", "Time Series"],
         filename: "state-space-kalman",
+      },
+      {
+        title: "Mean, Variance & Probability Densities",
+        description: "Mean, variance, probability density functions, and the distributions they describe",
+        difficulty: "Beginner",
+        tags: ["Probability", "Statistics", "Distributions", "Density Functions"],
+        filename: "distributions-integrals-cumulative-distributions",
       },
       {
   title: "Linear and Logistic Regression",
@@ -194,6 +215,13 @@ const articles: Articles = {
         difficulty: "Advanced",
         tags: ["HMM", "Market Regimes", "State Models"],
         filename: "hmm-market-regimes",
+      },
+      {
+        title: "Sharpe Ratio and Strategy Backtesting",
+        description: "Measuring return per unit of risk, and using it to compare and evaluate trading strategies in a backtest",
+        difficulty: "Intermediate",
+        tags: ["Sharpe Ratio", "Risk-Adjusted Return", "Backtesting", "Performance Metrics"],
+        filename: "sharpe-ratio",
       },
     ],
   },
