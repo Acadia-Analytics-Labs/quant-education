@@ -122,7 +122,7 @@ For example, if a mutual fund has a 0.75% expense ratio, investors pay approxima
 
 ### Sales Loads
 
-Some mutual funds charge commission called loans. 
+Some mutual funds charge commission called loads. 
 
 * **Front-end loads** are paid when purchasing shares  
 * **Back-end loads** are paid when selling shares   
