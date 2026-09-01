@@ -78,6 +78,13 @@ const articles: Articles = {
         tags: ["Investments", "Stock Market", "Volatility", "Market Risk"],
         filename: "volatility",
       },
+      {
+        title: "Mutual Funds",
+        description: "An overview of mutual funds and the pros and cons of investing in them",
+        difficulty: "Beginner",
+        tags: ["Investments", "Portfolio Management", "Diversification", "Retirement Investing"],
+        filename: "mutual-funds",
+      },
     ],
   },
   "probability-statistics": {

@@ -147,6 +147,10 @@ ARTICLES = [
          title="Measuring Market Risk", difficulty="Beginner",
          tags=["Volatility", "VIX", "Beta"],
          blurb="Volatility, the VIX and beta — three lenses on market risk."),
+    dict(category="trading", slug="mutual-funds",
+         title="Mutual Funds", difficulty="Beginner",
+         tags=["Mutual Funds", "NAV", "Diversification"],
+         blurb="Pooled, professionally managed baskets — priced once a day at NAV."),
 
     # --- Economics & Markets ---
     dict(category="economics", slug="fundamental-vs-technical-analysis",
