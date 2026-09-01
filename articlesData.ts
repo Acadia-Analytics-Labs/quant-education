@@ -64,6 +64,13 @@ const articles: Articles = {
         tags: ["ESG", "Sustainable Investing"],
         filename: "esg-investing",
       },
+      {
+        title: "Measuring Market Risk",
+        description: "How volatility, standard deviation, the VIX, and beta are used to measure market risk.",
+        difficulty: "Beginner",
+        tags: ["Investments", "Stock Market", "Volatility", "Market Risk"],
+        filename: "volatility",
+      },
     ],
   },
   "probability-statistics": {

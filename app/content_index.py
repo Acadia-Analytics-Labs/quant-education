@@ -143,6 +143,10 @@ ARTICLES = [
          title="Trading Indicators Cheat Sheet", difficulty="Beginner",
          tags=["Indicators", "RSI", "MACD"],
          blurb="A quick tour of the most common technical indicators."),
+    dict(category="trading", slug="volatility",
+         title="Measuring Market Risk", difficulty="Beginner",
+         tags=["Volatility", "VIX", "Beta"],
+         blurb="Volatility, the VIX and beta — three lenses on market risk."),
 
     # --- Economics & Markets ---
     dict(category="economics", slug="fundamental-vs-technical-analysis",
