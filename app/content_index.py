@@ -77,6 +77,10 @@ ARTICLES = [
          title="State-Space Models & Kalman Filters", difficulty="Advanced",
          tags=["Kalman", "Filtering", "Signal"],
          blurb="Track a hidden 'true' value through noisy market data."),
+    dict(category="probability-statistics", slug="distributions-integrals-cumulative-distributions",
+         title="Mean, Variance & Probability Densities", difficulty="Beginner",
+         tags=["Mean", "Variance", "PDF", "CDF"],
+         blurb="Centre, spread, and the integral that turns a density into a probability."),
 
     # --- Quantitative Finance ---
     dict(category="quantitative-finance", slug="intro-quant-trading",
