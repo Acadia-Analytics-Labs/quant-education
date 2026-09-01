@@ -58,7 +58,7 @@ Bond funds invest in fixed-income securities such as government and corporate bo
 
 ### Money Market Funds
 
-Money market funds invest in short-term, high-quality debt securities such as Treasury bills and commercial paper. They priortize preservation and liquidity, making them among the lowest-risk mutual funds. 
+Money market funds invest in short-term, high-quality debt securities such as Treasury bills and commercial paper. They prioritize preservation and liquidity, making them among the lowest-risk mutual funds. 
 
 ### Balanced Funds
 
@@ -126,7 +126,7 @@ Some mutual funds charge commission called loans.
 
 * **Front-end loads** are paid when purchasing shares  
 * **Back-end loads** are paid when selling shares   
-* **No-load funds** charge no sales commision
+* **No-load funds** charge no sales commission
 
 Many investors today prefer no-load funds because they reduce investing costs. 
 
@@ -167,7 +167,7 @@ These features make mutual funds particularly attractive for long-term investors
 
 * Management fees reduce returns  
 * Active funds may underperform their benchmarks  
-* Investors cant trade throughout the day  
+* Investors can't trade throughout the day  
 * Taxable capital gains distributions may occur even if shares are not sold   
 * Investors have less control over individual investment decision
 
